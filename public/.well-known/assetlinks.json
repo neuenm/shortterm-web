@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.neuenm.shortterm",
+      "sha256_cert_fingerprints": ["TODO: get via `eas credentials` on the mobile app repo"]
+    }
+  }
+]
