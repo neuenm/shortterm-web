@@ -1,16 +1,18 @@
+import { useTranslations } from "next-intl";
 import { STORE_URLS } from "@/lib/store-urls";
-import { copy } from "@/lib/copy";
 
 function BadgeContent({
   icon,
   eyebrow,
   label,
   disabled,
+  comingSoonLabel,
 }: {
   icon: React.ReactNode;
   eyebrow: string;
   label: string;
   disabled: boolean;
+  comingSoonLabel: string;
 }) {
   return (
     <span
@@ -22,7 +24,7 @@ function BadgeContent({
     >
       {icon}
       <span className="flex flex-col items-start leading-none">
-        <span className="text-[11px]">{disabled ? copy.hero.comingSoon : eyebrow}</span>
+        <span className="text-[11px]">{disabled ? comingSoonLabel : eyebrow}</span>
         <span className="text-sm font-semibold">{label}</span>
       </span>
     </span>
@@ -46,6 +48,7 @@ function PlayIcon() {
 }
 
 export default function StoreBadges({ className = "" }: { className?: string }) {
+  const t = useTranslations();
   const iosHref = STORE_URLS.ios;
   const androidHref = STORE_URLS.android;
 
@@ -55,18 +58,20 @@ export default function StoreBadges({ className = "" }: { className?: string }) 
         <a href={iosHref} target="_blank" rel="noopener noreferrer">
           <BadgeContent
             icon={<AppleIcon />}
-            eyebrow="Descargar en"
+            eyebrow={t("storeBadges.downloadOn")}
             label="App Store"
             disabled={false}
+            comingSoonLabel={t("hero.comingSoon")}
           />
         </a>
       ) : (
-        <span aria-disabled="true" title={copy.hero.comingSoon}>
+        <span aria-disabled="true" title={t("hero.comingSoon")}>
           <BadgeContent
             icon={<AppleIcon />}
-            eyebrow="Descargar en"
+            eyebrow={t("storeBadges.downloadOn")}
             label="App Store"
             disabled
+            comingSoonLabel={t("hero.comingSoon")}
           />
         </span>
       )}
@@ -74,18 +79,20 @@ export default function StoreBadges({ className = "" }: { className?: string }) 
         <a href={androidHref} target="_blank" rel="noopener noreferrer">
           <BadgeContent
             icon={<PlayIcon />}
-            eyebrow="Disponible en"
+            eyebrow={t("storeBadges.availableOn")}
             label="Google Play"
             disabled={false}
+            comingSoonLabel={t("hero.comingSoon")}
           />
         </a>
       ) : (
-        <span aria-disabled="true" title={copy.hero.comingSoon}>
+        <span aria-disabled="true" title={t("hero.comingSoon")}>
           <BadgeContent
             icon={<PlayIcon />}
-            eyebrow="Disponible en"
+            eyebrow={t("storeBadges.availableOn")}
             label="Google Play"
             disabled
+            comingSoonLabel={t("hero.comingSoon")}
           />
         </span>
       )}

@@ -1,9 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
-import { copy } from "@/lib/copy";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
-export default function Footer() {
+export default async function Footer() {
   const year = new Date().getFullYear();
+  const t = await getTranslations();
 
   return (
     <footer className="w-full border-t border-ink/5 bg-warm-gray">
@@ -17,24 +18,24 @@ export default function Footer() {
             className="h-9 w-9 rounded-lg"
           />
           <div>
-            <p className="text-sm font-semibold text-ink">{copy.brand.name}</p>
-            <p className="text-xs text-muted">{copy.footer.tagline}</p>
+            <p className="text-sm font-semibold text-ink">{t("brand.name")}</p>
+            <p className="text-xs text-muted">{t("footer.tagline")}</p>
           </div>
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-ink hover:text-primary">
-              {copy.nav.privacy}
+              {t("nav.privacy")}
             </Link>
             <a
-              href={`mailto:${copy.footer.contactEmail}`}
+              href={`mailto:${t("footer.contactEmail")}`}
               className="text-ink hover:text-primary"
             >
-              {copy.footer.contactEmail}
+              {t("footer.contactEmail")}
             </a>
           </div>
-          <p>{copy.footer.copyright(year)}</p>
+          <p>{t("footer.copyright", { year })}</p>
         </div>
       </div>
     </footer>

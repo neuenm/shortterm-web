@@ -1,29 +1,53 @@
 import type { Metadata } from "next";
-import { copy } from "@/lib/copy";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getPathname } from "@/i18n/navigation";
 
-export const metadata: Metadata = {
-  title: `${copy.privacy.title} · ShortTerm`,
-  description: copy.privacy.title,
-};
+type Section = { heading: string; body: string[]; list?: string[] };
 
-export default function PrivacyPage() {
+export async function generateMetadata({
+  params,
+}: PageProps<"/[locale]/privacy">): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "privacy" });
+
+  return {
+    title: `${t("title")} · ShortTerm`,
+    description: t("title"),
+    alternates: {
+      languages: {
+        es: await getPathname({ locale: "es", href: "/privacy" }),
+        en: await getPathname({ locale: "en", href: "/privacy" }),
+      },
+    },
+  };
+}
+
+export default async function PrivacyPage({
+  params,
+}: PageProps<"/[locale]/privacy">) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("privacy");
+  const sections = t.raw("sections") as Section[];
+
   return (
     <div className="w-full bg-cream">
       <div className="mx-auto max-w-3xl px-6 py-16">
         <h1 className="text-3xl font-extrabold text-ink sm:text-4xl">
-          {copy.privacy.title}
+          {t("title")}
         </h1>
-        <p className="mt-2 text-sm text-muted">{copy.privacy.lastUpdated}</p>
+        <p className="mt-2 text-sm text-muted">{t("lastUpdated")}</p>
 
         <div
           role="alert"
           className="mt-6 rounded-xl border border-secondary/40 bg-secondary/10 px-5 py-4 text-sm font-medium text-ink"
         >
-          {copy.privacy.draftNotice}
+          {t("draftNotice")}
         </div>
 
         <div className="mt-10 flex flex-col gap-10">
-          {copy.privacy.sections.map((section) => (
+          {sections.map((section) => (
             <section key={section.heading}>
               <h2 className="text-xl font-bold text-ink">{section.heading}</h2>
               <div className="mt-3 flex flex-col gap-3 text-muted">

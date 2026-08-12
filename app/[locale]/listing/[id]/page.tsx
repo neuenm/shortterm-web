@@ -1,27 +1,41 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getListingPreview } from "@/lib/listing";
 import { formatAudPerWeek, formatDateRange } from "@/lib/format";
-import { copy } from "@/lib/copy";
+import { getPathname } from "@/i18n/navigation";
 import StoreBadges from "@/components/store-badges";
 
 export async function generateMetadata({
   params,
-}: PageProps<"/listing/[id]">): Promise<Metadata> {
-  const { id } = await params;
+}: PageProps<"/[locale]/listing/[id]">): Promise<Metadata> {
+  const { locale, id } = await params;
   const listing = await getListingPreview(id);
+  const t = await getTranslations({ locale, namespace: "listing" });
+
+  const alternates = {
+    languages: {
+      es: await getPathname({ locale: "es", href: `/listing/${id}` }),
+      en: await getPathname({ locale: "en", href: `/listing/${id}` }),
+    },
+  };
 
   if (!listing) {
-    return { title: "Publicación no disponible · ShortTerm" };
+    return { title: t("metadataUnavailableTitle"), alternates };
   }
 
-  const title = `${listing.title} · ShortTerm`;
-  const description = `${listing.location_text} · ${listing.bedrooms} habitaciones · desde ${listing.start_date}`;
+  const title = t("metadataTitle", { title: listing.title });
+  const description = t("metadataDescription", {
+    location: listing.location_text,
+    bedrooms: listing.bedrooms,
+    date: listing.start_date,
+  });
   const image = listing.cover_photo_url ?? "/isotipo.png";
 
   return {
     title,
     description,
+    alternates,
     openGraph: {
       title,
       description,
@@ -37,12 +51,18 @@ export async function generateMetadata({
   };
 }
 
-function UnavailableState() {
+function UnavailableState({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="mx-auto flex max-w-lg flex-col items-center gap-6 px-6 py-24 text-center">
       <Image src="/isotipo.png" alt="" width={64} height={64} className="h-16 w-16" />
-      <h1 className="text-2xl font-extrabold text-ink">{copy.listing.unavailable.title}</h1>
-      <p className="text-muted">{copy.listing.unavailable.description}</p>
+      <h1 className="text-2xl font-extrabold text-ink">{title}</h1>
+      <p className="text-muted">{description}</p>
       <StoreBadges />
     </div>
   );
@@ -50,21 +70,29 @@ function UnavailableState() {
 
 export default async function ListingPreviewPage({
   params,
-}: PageProps<"/listing/[id]">) {
-  const { id } = await params;
+}: PageProps<"/[locale]/listing/[id]">) {
+  const { locale, id } = await params;
+  setRequestLocale(locale);
+
+  const t = await getTranslations("listing");
   const listing = await getListingPreview(id);
 
   if (!listing) {
-    return <UnavailableState />;
+    return (
+      <UnavailableState
+        title={t("unavailable.title")}
+        description={t("unavailable.description")}
+      />
+    );
   }
 
   const bathroomsLabel =
-    listing.bathrooms === 1 ? copy.listing.bathroomLabel : copy.listing.bathroomsLabel;
+    listing.bathrooms === 1 ? t("bathroomLabel") : t("bathroomsLabel");
 
   const details = [
-    `${listing.bedrooms} ${copy.listing.bedroomsLabel}`,
+    `${listing.bedrooms} ${t("bedroomsLabel")}`,
     listing.bathrooms != null ? `${listing.bathrooms} ${bathroomsLabel}` : null,
-    `${listing.max_guests} ${copy.listing.guestsLabel}`,
+    `${listing.max_guests} ${t("guestsLabel")}`,
   ].filter(Boolean);
 
   return (
@@ -115,15 +143,15 @@ export default async function ListingPreviewPage({
                   {formatAudPerWeek(listing.price_per_week)}
                   <span className="text-sm font-medium text-muted">
                     {" "}
-                    / {copy.listing.weekLabel}
+                    / {t("weekLabel")}
                   </span>
                 </p>
               )}
               {listing.accepts_couples && listing.price_per_week_couples != null && (
                 <p className="text-sm text-muted">
-                  {copy.listing.couplesLabel}:{" "}
+                  {t("couplesLabel")}:{" "}
                   <span className="font-semibold text-ink">
-                    {formatAudPerWeek(listing.price_per_week_couples)} / {copy.listing.weekLabel}
+                    {formatAudPerWeek(listing.price_per_week_couples)} / {t("weekLabel")}
                   </span>
                 </p>
               )}
@@ -132,14 +160,14 @@ export default async function ListingPreviewPage({
         </div>
 
         <div className="mt-8 flex flex-col items-center gap-4 rounded-2xl border border-primary/20 bg-primary/5 p-6 text-center">
-          <h2 className="text-lg font-bold text-ink">{copy.listing.gateTitle}</h2>
-          <p className="text-sm text-muted">{copy.listing.gateDescription}</p>
+          <h2 className="text-lg font-bold text-ink">{t("gateTitle")}</h2>
+          <p className="text-sm text-muted">{t("gateDescription")}</p>
           <StoreBadges />
           <a
             href={`shortterm://listing/${listing.id}`}
             className="text-sm font-medium text-primary underline underline-offset-2"
           >
-            {copy.listing.openInApp}
+            {t("openInApp")}
           </a>
         </div>
       </div>

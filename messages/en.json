@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": "ShortTerm · Short stays. Long stories.",
+    "description": "ShortTerm connects people who have a room available for a fixed period with people looking for one. Post or search, chat directly, and coordinate your stay."
+  },
+  "brand": {
+    "name": "ShortTerm",
+    "tagline": "Short stays. Long stories."
+  },
+  "nav": {
+    "privacy": "Privacy",
+    "languageSwitcher": "Language"
+  },
+  "hero": {
+    "eyebrow": "A new way to find a place to stay",
+    "title": "Find your next room, no hassle.",
+    "subtitle": "ShortTerm connects people who have a room available for a fixed period with people looking for one. Post or search, chat directly, and coordinate your stay.",
+    "ctaHint": "Download the app when it's available:",
+    "comingSoon": "Coming soon"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "ShortTerm connects people — it doesn't manage bookings or payments. You coordinate everything directly with the other person.",
+    "steps": [
+      {
+        "title": "Post or search for a room",
+        "description": "Hosts post their available room for fixed dates. People searching filter by city and dates."
+      },
+      {
+        "title": "Reach out by chat",
+        "description": "Message directly within the app to ask questions and get to know the other person before deciding."
+      },
+      {
+        "title": "Work out the details",
+        "description": "Price, house rules, move-in and move-out dates: it's all discussed and agreed between the two of you."
+      },
+      {
+        "title": "Confirm the match",
+        "description": "Once both sides agree, you confirm the match inside the app and you're set."
+      }
+    ]
+  },
+  "whyShortTerm": {
+    "title": "Why ShortTerm",
+    "reasons": [
+      {
+        "title": "Real people",
+        "description": "Profiles with a name, habits, and preferences, so you know who you'll be living with before deciding."
+      },
+      {
+        "title": "No booking fees",
+        "description": "ShortTerm doesn't charge to book or process payments. It just connects people; the rest is up to you."
+      },
+      {
+        "title": "Direct chat",
+        "description": "No middlemen or endless forms: you talk directly with the other person from the very first message."
+      },
+      {
+        "title": "Built for short stays",
+        "description": "Fixed dates, no long contracts: ideal for work trips, exchanges, or temporary moves."
+      }
+    ]
+  },
+  "storeBadges": {
+    "appStoreAlt": "Download on the App Store",
+    "playStoreAlt": "Available on Google Play",
+    "downloadOn": "Download on",
+    "availableOn": "Available on"
+  },
+  "footer": {
+    "tagline": "Short stays. Long stories.",
+    "contactLabel": "Contact",
+    "contactEmail": "hola@shortterm-app.com",
+    "copyright": "© {year} ShortTerm. All rights reserved."
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "draftNotice": "This document is a draft and has not yet been reviewed by a lawyer — do not publish it as a final version.",
+    "lastUpdated": "Last updated: internal draft",
+    "sections": [
+      {
+        "heading": "1. What data we collect",
+        "body": [
+          "When you create a ShortTerm account, we collect your email address and, if you choose to sign in with Google, the basic Google profile information needed for authentication.",
+          "We also collect your profile information: name, nationality, languages you speak, profile photo, and lifestyle preferences (habits, schedule, whether you smoke, whether you have pets). This information is used solely to show compatibility between hosts and seekers.",
+          "If you post a room as a host, we collect the data for that listing: address, location, photos, price, and house rules.",
+          "We collect the messages you send through chat with other users inside the app, once you've matched.",
+          "We collect a push notification token from your device so we can send you notifications about your activity in the app."
+        ]
+      },
+      {
+        "heading": "2. Who we share data with",
+        "body": [
+          "We don't sell your data. We share information with the following providers, who process data on our behalf so the app can work:"
+        ],
+        "list": [
+          "Supabase — database, authentication, and file storage (hosting infrastructure).",
+          "Google — only if you choose to sign in with Google (OAuth).",
+          "Sentry — error and crash monitoring, including session replay, which may include personal data.",
+          "Brevo — sending transactional emails, for example notifications about reports.",
+          "Expo/EAS — push notification delivery."
+        ]
+      },
+      {
+        "heading": "3. What we use your data for",
+        "body": [
+          "We use your data to connect hosts with seekers, enable chat within the app, send you transactional notifications, process safety reports, and fix application bugs."
+        ]
+      },
+      {
+        "heading": "4. What we do NOT use your data for",
+        "body": [
+          "ShortTerm doesn't process payments: the app has no payment or booking feature, so we don't collect or process card or payment data.",
+          "We don't use your data for ad targeting.",
+          "We don't sell your data to third parties."
+        ]
+      },
+      {
+        "heading": "5. Your rights",
+        "body": [
+          "You can request access to, correction of, or deletion of your personal data at any time by writing to the contact address listed at the end of this document."
+        ]
+      },
+      {
+        "heading": "6. Data retention and deletion",
+        "body": [
+          "When you delete your account from the app, your profile is removed following the app's deletion flow. Exact retention periods for each type of data are subject to legal and product review, and will be detailed in the final version of this document."
+        ]
+      },
+      {
+        "heading": "7. Contact",
+        "body": [
+          "For questions about this policy or your personal data, write to us at privacidad@shortterm-app.com."
+        ]
+      }
+    ]
+  },
+  "listing": {
+    "unavailable": {
+      "title": "This listing is no longer available",
+      "description": "It may have been removed or is no longer active. Download the ShortTerm app to see other available rooms."
+    },
+    "fromLabel": "from",
+    "weekLabel": "per week",
+    "couplesLabel": "Price for couples",
+    "bedroomsLabel": "bedrooms",
+    "bathroomLabel": "bathroom",
+    "bathroomsLabel": "bathrooms",
+    "guestsLabel": "guests",
+    "gateTitle": "Install the app to see more",
+    "gateDescription": "Install the app to see more photos, contact the host, and coordinate your stay.",
+    "openInApp": "Open in app",
+    "metadataTitle": "{title} · ShortTerm",
+    "metadataUnavailableTitle": "Listing unavailable · ShortTerm",
+    "metadataDescription": "{location} · {bedrooms} bedrooms · from {date}"
+  }
+}
