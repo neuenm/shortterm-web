@@ -1,10 +1,8 @@
 import { useTranslations } from "next-intl";
-
-type Step = { title: string; description: string };
+import HowItWorksSteps, { type Mode, type Step } from "@/components/how-it-works-steps";
 
 export default function HowItWorksSection() {
   const t = useTranslations("howItWorks");
-  const steps = t.raw("steps") as Step[];
 
   return (
     <section className="w-full bg-warm-gray">
@@ -16,17 +14,12 @@ export default function HowItWorksSection() {
           <p className="mt-3 text-muted">{t("subtitle")}</p>
         </div>
 
-        <ol className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
-            <li key={step.title} className="flex flex-col items-start gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-lg font-bold text-cream">
-                {index + 1}
-              </span>
-              <h3 className="text-lg font-bold text-ink">{step.title}</h3>
-              <p className="text-sm text-muted">{step.description}</p>
-            </li>
-          ))}
-        </ol>
+        {/* Steps copied verbatim from the app's chat.match.info.* strings, so the landing
+            and the in-app walkthrough never describe two different flows. */}
+        <HowItWorksSteps
+          modeLabels={t.raw("modes") as Record<Mode, string>}
+          steps={t.raw("steps") as Record<Mode, Step[]>}
+        />
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export function GET() {
       apps: [],
       details: [
         {
-          appID: "TODO_APPLE_TEAM_ID.com.neuenm.shortterm", // TODO: replace TODO_APPLE_TEAM_ID
+          appID: "VND9R25496.com.neuenm.shortterm",
           paths: ["/listing/*"],
         },
       ],

@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.neuenm.shortterm",
-      "sha256_cert_fingerprints": ["TODO: get via `eas credentials` on the mobile app repo"]
+      "sha256_cert_fingerprints": ["8C:AE:AD:77:7E:A6:4E:B9:E4:31:06:CC:99:4A:61:F0:E5:76:97:71:B7:8E:4D:4A:87:51:A9:15:9A:C0:A4:DD"]
     }
   }
 ]

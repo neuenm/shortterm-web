@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import type { Platform } from "@/lib/platform";
 import { STORE_URLS } from "@/lib/store-urls";
 
 function BadgeContent({
@@ -47,14 +48,23 @@ function PlayIcon() {
   );
 }
 
-export default function StoreBadges({ className = "" }: { className?: string }) {
+export default function StoreBadges({
+  className = "",
+  platform = "other",
+}: {
+  className?: string;
+  // On a phone only that phone's store is relevant; anywhere else both badges show.
+  platform?: Platform;
+}) {
   const t = useTranslations();
   const iosHref = STORE_URLS.ios;
   const androidHref = STORE_URLS.android;
+  const showIos = platform !== "android";
+  const showAndroid = platform !== "ios";
 
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
-      {iosHref ? (
+      {!showIos ? null : iosHref ? (
         <a href={iosHref} target="_blank" rel="noopener noreferrer">
           <BadgeContent
             icon={<AppleIcon />}
@@ -75,7 +85,7 @@ export default function StoreBadges({ className = "" }: { className?: string }) 
           />
         </span>
       )}
-      {androidHref ? (
+      {!showAndroid ? null : androidHref ? (
         <a href={androidHref} target="_blank" rel="noopener noreferrer">
           <BadgeContent
             icon={<PlayIcon />}

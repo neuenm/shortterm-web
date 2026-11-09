@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "ShortTerm · Short stays. Long stories.",
-    "description": "ShortTerm connects people who have a room available for a fixed period with people looking for one. Post or search, chat directly, and coordinate your stay."
+    "description": "ShortTerm connects people who have a room available, for a few weeks or long term, with people looking for one. Publish or search, request the room, and coordinate your stay by chat."
   },
   "brand": {
     "name": "ShortTerm",
@@ -9,36 +9,83 @@
   },
   "nav": {
     "privacy": "Privacy",
-    "languageSwitcher": "Language"
+    "terms": "Terms",
+    "help": "Help",
+    "languageSwitcher": "Language",
+    "download": "Download"
   },
   "hero": {
-    "eyebrow": "A new way to find a place to stay",
+    "eyebrow": "A new way to find where to stay",
     "title": "Find your next room, no hassle.",
-    "subtitle": "ShortTerm connects people who have a room available for a fixed period with people looking for one. Post or search, chat directly, and coordinate your stay.",
+    "subtitle": "ShortTerm connects people who have a room available, for a few weeks or long term, with people looking for one. Publish or search, request the room, and coordinate your stay by chat.",
     "ctaHint": "Download the app when it's available:",
     "comingSoon": "Coming soon"
   },
   "howItWorks": {
     "title": "How it works",
     "subtitle": "ShortTerm connects people — it doesn't manage bookings or payments. You coordinate everything directly with the other person.",
-    "steps": [
-      {
-        "title": "Post or search for a room",
-        "description": "Hosts post their available room for fixed dates. People searching filter by city and dates."
-      },
-      {
-        "title": "Reach out by chat",
-        "description": "Message directly within the app to ask questions and get to know the other person before deciding."
-      },
-      {
-        "title": "Work out the details",
-        "description": "Price, house rules, move-in and move-out dates: it's all discussed and agreed between the two of you."
-      },
-      {
-        "title": "Confirm the match",
-        "description": "Once both sides agree, you confirm the match inside the app and you're set."
-      }
-    ]
+    "modes": {
+      "guest": "Search for a room",
+      "host": "Offer a room"
+    },
+    "steps": {
+      "guest": [
+        {
+          "title": "You request the room",
+          "description": "You search for a room and send its host a request — that opens a chat between you."
+        },
+        {
+          "title": "You chat and sort out the details",
+          "description": "Talk about schedules, house rules, or anything else that helps you decide — nothing is locked in yet."
+        },
+        {
+          "title": "The host chooses",
+          "description": "The host chooses from everyone who sent them a request. While you wait, you can cancel yours anytime."
+        },
+        {
+          "title": "You confirm the room",
+          "description": "If the host chooses you, you can confirm the match, or decline if you've changed your mind."
+        },
+        {
+          "title": "It's a match",
+          "description": "Once you both confirm, the room is yours and the fun part begins: plan your arrival with the host over chat."
+        },
+        {
+          "title": "You review each other",
+          "description": "Once the stay ends (or a month after moving in, for long term), you can each leave the other a review. Reviews are shown once you've both left yours — if one of you reviews, the other has 14 days to review back."
+        }
+      ],
+      "host": [
+        {
+          "title": "A guest sends you a request",
+          "description": "Anyone searching can view your room and send you a request — that opens a chat, and the request shows up in your inbox."
+        },
+        {
+          "title": "You chat and sort out the details",
+          "description": "Talk about schedules, house rules, or anything else that helps you decide — nothing is locked in yet."
+        },
+        {
+          "title": "You choose a guest",
+          "description": "You can choose any guest who sent you a request, any time, while the listing is still open. You can also reject a specific guest without affecting the rest. Once the person you chose confirms the match, we let the other interested guests know they weren't chosen."
+        },
+        {
+          "title": "The guest responds",
+          "description": "Once you choose someone, they can confirm or decline. We'll let you know either way."
+        },
+        {
+          "title": "It's a match",
+          "description": "Once you both confirm, you have your guest and the fun part begins: plan the arrival together over chat. The listing closes automatically."
+        },
+        {
+          "title": "You review each other",
+          "description": "Once the stay ends (or a month after moving in, for long term), you can each leave the other a review. Reviews are shown once you've both left yours — if one of you reviews, the other has 14 days to review back."
+        }
+      ]
+    }
+  },
+  "appPreview": {
+    "title": "See ShortTerm in action",
+    "subtitle": "A quick look at browsing rooms and chatting with your future housemate."
   },
   "whyShortTerm": {
     "title": "Why ShortTerm",
@@ -56,10 +103,15 @@
         "description": "No middlemen or endless forms: you talk directly with the other person from the very first message."
       },
       {
-        "title": "Built for short stays",
-        "description": "Fixed dates, no long contracts: ideal for work trips, exchanges, or temporary moves."
+        "title": "Short term or long term",
+        "description": "Rooms for a few weeks or for a longer stay, with the dates clear from the start: ideal for work trips, exchanges, or a move."
       }
     ]
+  },
+  "cta": {
+    "eyebrow": "Search ShortTerm first.",
+    "title": "Your next room is closer than you think",
+    "subtitle": "Download ShortTerm and start searching for or publishing your room today."
   },
   "storeBadges": {
     "appStoreAlt": "Download on the App Store",
@@ -74,84 +126,161 @@
     "copyright": "© {year} ShortTerm. All rights reserved."
   },
   "privacy": {
-    "title": "Privacy policy",
-    "draftNotice": "This document is a draft and has not yet been reviewed by a lawyer — do not publish it as a final version.",
-    "lastUpdated": "Last updated: internal draft",
+    "title": "Privacy Policy",
+    "effectiveDate": "Effective date: {date}",
+    "draftNotice": "Draft — this document has not yet been reviewed by a lawyer. It is not in force and must not be relied on. It is published here only so it can be reviewed.",
+    "englishOnlyNotice": "This document is available in English only. The English version is the operative one, and it is the version that applies to your use of ShortTerm.",
+    "tableOfContents": "Contents"
+  },
+  "help": {
+    "title": "Help center",
+    "intro": "Answers to the questions we hear most often. Can't find yours? Write to us — see the contact box at the bottom of this page.",
+    "stillNeedHelp": "Still need help? Write to us at",
+    "contactEmail": "hola@shortterm-app.com",
     "sections": [
       {
-        "heading": "1. What data we collect",
+        "heading": "How does ShortTerm work?",
         "body": [
-          "When you create a ShortTerm account, we collect your email address and, if you choose to sign in with Google, the basic Google profile information needed for authentication.",
-          "We also collect your profile information: name, nationality, languages you speak, profile photo, and lifestyle preferences (habits, schedule, whether you smoke, whether you have pets). This information is used solely to show compatibility between hosts and seekers.",
-          "If you post a room as a host, we collect the data for that listing: address, location, photos, price, and house rules.",
-          "We collect the messages you send through chat with other users inside the app, once you've matched.",
-          "We collect a push notification token from your device so we can send you notifications about your activity in the app."
+          "Hosts publish their room with its dates, for a few weeks or long term, and people looking for a room filter by city, suburb and dates. The person searching sends a request from the app, which opens the chat with the host. Once both people agree, they confirm the match inside the app — that closes the listing and unlocks mutual reviews between the two of you."
         ]
       },
       {
-        "heading": "2. Who we share data with",
+        "heading": "Does ShortTerm handle bookings or payments?",
         "body": [
-          "We don't sell your data. We share information with the following providers, who process data on our behalf so the app can work:"
-        ],
-        "list": [
-          "Supabase — database, authentication, and file storage (hosting infrastructure).",
-          "Google — only if you choose to sign in with Google (OAuth).",
-          "Sentry — error and crash monitoring, including session replay, which may include personal data.",
-          "Brevo — sending transactional emails, for example notifications about reports.",
-          "Expo/EAS — push notification delivery."
+          "No. ShortTerm only connects people — there's no booking flow and no payment processing inside the app. Price, house rules, and move-in/move-out dates are all agreed directly between the host and the guest, outside the app."
         ]
       },
       {
-        "heading": "3. What we use your data for",
+        "heading": "I can't confirm a match. What's wrong?",
         "body": [
-          "We use your data to connect hosts with seekers, enable chat within the app, send you transactional notifications, process safety reports, and fix application bugs."
+          "A match needs both people to confirm it from their side — if you've confirmed but the listing still shows as open, the other person likely hasn't confirmed yet. Once both confirm, the listing closes automatically and the match moves to your confirmed requests."
         ]
       },
       {
-        "heading": "4. What we do NOT use your data for",
+        "heading": "My listing (or a request on it) disappeared. What happened?",
         "body": [
-          "ShortTerm doesn't process payments: the app has no payment or booking feature, so we don't collect or process card or payment data.",
-          "We don't use your data for ad targeting.",
-          "We don't sell your data to third parties."
+          "Listings and requests expire automatically once their date range has passed, and the app also closes out requests tied to a listing that was paused or deleted. Check the archived section of your requests list — that's where past, expired, or removed listings and requests end up instead of being deleted outright."
         ]
       },
       {
-        "heading": "5. Your rights",
+        "heading": "How do I switch between looking for a room and offering one?",
         "body": [
-          "You can request access to, correction of, or deletion of your personal data at any time by writing to the contact address listed at the end of this document."
+          "Open the menu (the ☰ icon at the top of the app) and choose \"Switch to\" — any account can move between searching for a room and offering one at any time, there's no separate account type."
         ]
       },
       {
-        "heading": "6. Data retention and deletion",
+        "heading": "How do I report a user or a listing?",
         "body": [
-          "When you delete your account from the app, your profile is removed following the app's deletion flow. Exact retention periods for each type of data are subject to legal and product review, and will be detailed in the final version of this document."
+          "Use the report flag icon on a profile or listing page, or the \"Report\" button inside a conversation's safety info. Our team reviews every report that comes in."
         ]
       },
       {
-        "heading": "7. Contact",
+        "heading": "How do I delete my account?",
         "body": [
-          "For questions about this policy or your personal data, write to us at privacidad@shortterm-app.com."
+          "Go to Settings → Delete account. This closes your active listings, withdraws your pending requests, and is permanent — it can't be undone from inside the app."
+        ]
+      },
+      {
+        "heading": "What happens to my data?",
+        "body": [
+          "See our Privacy Policy for the full details on what we collect and who we share it with."
         ]
       }
     ]
   },
+  "terms": {
+    "title": "Terms of Service",
+    "effectiveDate": "Effective date: {date}",
+    "draftNotice": "Draft — this document has not yet been reviewed by a lawyer. It is not in force and must not be relied on. It is published here only so it can be reviewed.",
+    "englishOnlyNotice": "This document is available in English only. The English version is the operative one, and it is the version that applies to your use of ShortTerm.",
+    "tableOfContents": "Contents"
+  },
   "listing": {
     "unavailable": {
-      "title": "This listing is no longer available",
-      "description": "It may have been removed or is no longer active. Download the ShortTerm app to see other available rooms."
+      "title": "This room is no longer available",
+      "description": "The host may have already confirmed a match, or the listing has closed. There are other rooms waiting for you in the ShortTerm app."
     },
-    "fromLabel": "from",
-    "weekLabel": "per week",
-    "couplesLabel": "Price for couples",
-    "bedroomsLabel": "bedrooms",
-    "bathroomLabel": "bathroom",
-    "bathroomsLabel": "bathrooms",
-    "guestsLabel": "guests",
-    "gateTitle": "Install the app to see more",
-    "gateDescription": "Install the app to see more photos, contact the host, and coordinate your stay.",
-    "openInApp": "Open in app",
+    "unavailablePaused": {
+      "title": "This room isn't available right now",
+      "description": "The host paused the listing and may turn it back on later. In the meantime, find other rooms in the app."
+    },
+    "stayType": {
+      "long_term": "Long term"
+    },
+    "newBadge": "New!",
+    "priceWeekly": "${amount} AUD / week",
+    "priceWeeklyCouples": "${amount} AUD / week for couples",
+    "availableFrom": "Available from {date}",
+    "availableRange": "Room available {startDate} – {endDate}",
+    "mapLocked": "See the location on the map in the app",
+    "morePhotos": "More photos in the app",
+    "allPhotos": "See all {count} photos in the app",
+    "detailsSectionTitle": "The room and the house",
+    "bedroomsLabel": "Bedrooms",
+    "bathroomsLabel": "Bathrooms",
+    "privateBathroomLabel": "Bathroom",
+    "privateBathroom": {
+      "yes": "Private bathroom",
+      "no": "Shared bathroom"
+    },
+    "billsIncludedLabel": "Bills",
+    "billsIncluded": {
+      "no": "Bills not included",
+      "yes": "Bills included"
+    },
+    "genderPreferenceLabel": "Who the room is for",
+    "genderPreference": {
+      "female_only": "Girls only",
+      "male_only": "Guys only"
+    },
+    "acceptsCouplesLabel": "Couples",
+    "acceptsCouples": {
+      "yes": "Open to couples",
+      "no": "Not open to couples"
+    },
+    "languagesSectionTitle": "Languages",
+    "languages": {
+      "es": "Spanish",
+      "en": "English",
+      "pt": "Portuguese",
+      "fr": "French",
+      "de": "German",
+      "it": "Italian",
+      "zh": "Chinese",
+      "ar": "Arabic",
+      "hi": "Hindi",
+      "ru": "Russian",
+      "ja": "Japanese",
+      "ko": "Korean",
+      "nl": "Dutch",
+      "vi": "Vietnamese",
+      "id": "Indonesian",
+      "tr": "Turkish",
+      "sv": "Swedish",
+      "ms": "Malay",
+      "other": "Other"
+    },
+    "hostSectionTitle": "Host",
+    "hostLocked": "Meet the host: their profile and reviews from other guests.",
+    "householdSectionTitle": "Who lives in the house",
+    "householdSize": "{count, plural, one {# person lives here} other {# people live here}}",
+    "householdLocked": "Find out who lives in the house and what you have in common.",
+    "lockedAction": "See in the app",
+    "requestCta": "Request room",
+    "requestCtaHint": "In the ShortTerm app · iOS and Android",
+    "gate": {
+      "title": "This room is waiting for you in the app",
+      "description": "Download ShortTerm to see the full listing and request it.",
+      "perks": [
+        "Every photo and the full description",
+        "Who lives in the house and what you have in common",
+        "The host's profile and reviews",
+        "Request the room and chat with the host",
+        "Alerts when rooms like this one show up"
+      ]
+    },
+    "openInApp": "Already have the app? Open it here",
     "metadataTitle": "{title} · ShortTerm",
-    "metadataUnavailableTitle": "Listing unavailable · ShortTerm",
-    "metadataDescription": "{location} · {bedrooms} bedrooms · from {date}"
+    "metadataUnavailableTitle": "Room unavailable · ShortTerm"
   }
 }

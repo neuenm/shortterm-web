@@ -10,6 +10,8 @@
   --color-accent: #ff7f6b;
   --color-success: #4caf6a;
   --color-muted: #7b8794;
+  /* The app's `backgroundSelected` — section-header icon circles, highlighted surfaces. */
+  --color-mint: #dcf3f0;
 }
 
 @theme inline {
@@ -22,6 +24,7 @@
   --color-accent: var(--color-accent);
   --color-success: var(--color-success);
   --color-muted: var(--color-muted);
+  --color-mint: var(--color-mint);
   --font-sans: var(--font-nunito);
 }
 

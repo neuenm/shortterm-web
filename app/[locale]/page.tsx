@@ -3,7 +3,9 @@ import { setRequestLocale } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import HeroSection from "@/components/hero-section";
 import HowItWorksSection from "@/components/how-it-works-section";
+import AppPreviewSection from "@/components/app-preview-section";
 import WhyShortTermSection from "@/components/why-shortterm-section";
+import CtaSection from "@/components/cta-section";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -24,7 +26,9 @@ export default async function Home({ params }: PageProps<"/[locale]">) {
     <>
       <HeroSection />
       <HowItWorksSection />
+      <AppPreviewSection />
       <WhyShortTermSection />
+      <CtaSection />
     </>
   );
 }

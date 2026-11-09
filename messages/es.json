@@ -1,44 +1,91 @@
 {
   "metadata": {
-    "title": "ShortTerm · Estancias cortas. Historias largas.",
-    "description": "ShortTerm conecta a personas que tienen una habitación disponible por un período fijo con personas que la están buscando. Publica o busca, chatea directo y coordina tu estadía."
+    "title": "ShortTerm · Estadías cortas. Historias largas.",
+    "description": "ShortTerm conecta a personas que tienen una habitación disponible, por unas semanas o long term, con personas que la están buscando. Publica o busca, solicita la habitación y coordina tu estadía por chat."
   },
   "brand": {
     "name": "ShortTerm",
-    "tagline": "Estancias cortas. Historias largas."
+    "tagline": "Estadías cortas. Historias largas."
   },
   "nav": {
     "privacy": "Privacidad",
-    "languageSwitcher": "Idioma"
+    "terms": "Términos",
+    "help": "Ayuda",
+    "languageSwitcher": "Idioma",
+    "download": "Descargar"
   },
   "hero": {
     "eyebrow": "Una nueva forma de encontrar dónde quedarte",
     "title": "Encuentra tu próxima habitación, sin vueltas.",
-    "subtitle": "ShortTerm conecta a personas que tienen una habitación disponible por un período fijo con personas que la están buscando. Publica o busca, chatea directo y coordina tu estadía.",
+    "subtitle": "ShortTerm conecta a personas que tienen una habitación disponible, por unas semanas o long term, con personas que la están buscando. Publica o busca, solicita la habitación y coordina tu estadía por chat.",
     "ctaHint": "Descarga la app cuando esté disponible:",
     "comingSoon": "Próximamente"
   },
   "howItWorks": {
     "title": "Cómo funciona",
     "subtitle": "ShortTerm conecta personas — no gestiona reservas ni pagos. Tú coordinas todo directo con la otra persona.",
-    "steps": [
-      {
-        "title": "Publica o busca una habitación",
-        "description": "Los anfitriones publican su habitación disponible para fechas fijas. Quienes buscan filtran por ciudad y fechas."
-      },
-      {
-        "title": "Contacta por chat",
-        "description": "Escribe directo dentro de la app para resolver dudas y conocer a la otra persona antes de decidir."
-      },
-      {
-        "title": "Coordinen los detalles",
-        "description": "Precio, reglas de la casa, fecha de entrada y salida: todo se conversa y se acuerda entre ambos."
-      },
-      {
-        "title": "Confirmen el match",
-        "description": "Cuando las dos partes están de acuerdo, confirman el match dentro de la app y listo."
-      }
-    ]
+    "modes": {
+      "guest": "Buscar habitación",
+      "host": "Ofrecer habitación"
+    },
+    "steps": {
+      "guest": [
+        {
+          "title": "Solicitas la habitación",
+          "description": "Buscas la habitación que te interesa y le envías una solicitud al anfitrión — eso abre un chat entre ustedes."
+        },
+        {
+          "title": "Chatean y afinan los detalles",
+          "description": "Hablan sobre horarios, normas de la casa, o lo que necesiten para decidir — todavía no se cierra nada."
+        },
+        {
+          "title": "El anfitrión elige",
+          "description": "El anfitrión elige entre las personas que le enviaron una solicitud. Mientras esperas, puedes cancelar la tuya cuando quieras."
+        },
+        {
+          "title": "Confirmas que quieres esa habitación",
+          "description": "Si el anfitrión te elige, puedes confirmar el match, o rechazar si cambiaste de opinión."
+        },
+        {
+          "title": "¡Es un match!",
+          "description": "Cuando ambos confirmen, la habitación es tuya y empieza lo bueno: coordina tu llegada con el anfitrión por el chat."
+        },
+        {
+          "title": "Se dejan una review",
+          "description": "Cuando termina la estadía (o al mes de la mudanza, si es long term), ambas partes pueden dejar una reseña. Estas se muestran cuando los dos la hayan enviado. Si uno la publica, el otro tiene 14 días para hacerlo."
+        }
+      ],
+      "host": [
+        {
+          "title": "Un interesado te envía una solicitud",
+          "description": "Quien busca habitación puede ver la tuya y enviarte una solicitud — eso abre un chat y la solicitud aparece en tu bandeja."
+        },
+        {
+          "title": "Chatean y afinan los detalles",
+          "description": "Hablan sobre horarios, normas de la casa, o lo que necesiten para decidir — todavía no se cierra nada."
+        },
+        {
+          "title": "Eliges a un interesado",
+          "description": "Puedes elegir a cualquier interesado que te haya enviado una solicitud, cuando quieras, mientras la publicación siga abierta. También puedes rechazar a un interesado puntual sin afectar al resto. Cuando la persona que elegiste confirme el match, les avisamos a los demás interesados que no fueron elegidos."
+        },
+        {
+          "title": "El interesado responde",
+          "description": "Cuando elijas a alguien, esa persona puede confirmar o rechazar. Te avisamos en cualquiera de los dos casos."
+        },
+        {
+          "title": "¡Es un match!",
+          "description": "Cuando ambos confirmen, ya tienes huésped y empieza lo bueno: coordinen la llegada por el chat. La publicación se cierra automáticamente."
+        },
+        {
+          "title": "Se dejan una review",
+          "description": "Cuando termina la estadía (o al mes de la mudanza, si es long term), ambas partes pueden dejar una reseña. Estas se muestran cuando los dos la hayan enviado. Si uno la publica, el otro tiene 14 días para hacerlo."
+        }
+      ]
+    }
+  },
+  "appPreview": {
+    "title": "Mira ShortTerm en acción",
+    "subtitle": "Un vistazo rápido a cómo explorar habitaciones y chatear con tu futuro compañero de casa."
   },
   "whyShortTerm": {
     "title": "Por qué ShortTerm",
@@ -56,10 +103,15 @@
         "description": "Nada de intermediarios ni formularios eternos: hablas directo con la otra persona desde el primer mensaje."
       },
       {
-        "title": "Pensado para estadías cortas",
-        "description": "Fechas fijas, sin contratos largos: ideal para viajes de trabajo, intercambios o mudanzas temporales."
+        "title": "Short term o long term",
+        "description": "Habitaciones por unas semanas o para quedarte más tiempo, con las fechas claras desde el principio: ideal para viajes de trabajo, intercambios o mudanzas."
       }
     ]
+  },
+  "cta": {
+    "eyebrow": "Busca primero en ShortTerm.",
+    "title": "Tu próxima habitación está más cerca de lo que crees",
+    "subtitle": "Descarga ShortTerm y empieza a buscar o publicar tu habitación hoy mismo."
   },
   "storeBadges": {
     "appStoreAlt": "Descargar en el App Store",
@@ -68,90 +120,167 @@
     "availableOn": "Disponible en"
   },
   "footer": {
-    "tagline": "Estancias cortas. Historias largas.",
+    "tagline": "Estadías cortas. Historias largas.",
     "contactLabel": "Contacto",
     "contactEmail": "hola@shortterm-app.com",
     "copyright": "© {year} ShortTerm. Todos los derechos reservados."
   },
   "privacy": {
     "title": "Política de privacidad",
-    "draftNotice": "Este documento es un borrador y aún no fue revisado por un abogado — no lo publiques como versión final.",
-    "lastUpdated": "Última actualización: borrador interno",
+    "effectiveDate": "Fecha de entrada en vigor: {date}",
+    "draftNotice": "Borrador — este documento todavía no fue revisado por un abogado. No está vigente y no debe usarse como referencia. Se publica aquí solo para poder revisarlo.",
+    "englishOnlyNotice": "Este documento está disponible únicamente en inglés. La versión en inglés es la que rige y la que se aplica a tu uso de ShortTerm.",
+    "tableOfContents": "Contenido"
+  },
+  "help": {
+    "title": "Centro de ayuda",
+    "intro": "Respuestas a las preguntas que más recibimos. ¿No encontraste la tuya? Escríbenos — mira el cuadro de contacto al final de esta página.",
+    "stillNeedHelp": "¿Todavía necesitas ayuda? Escríbenos a",
+    "contactEmail": "hola@shortterm-app.com",
     "sections": [
       {
-        "heading": "1. Qué datos recopilamos",
+        "heading": "¿Cómo funciona ShortTerm?",
         "body": [
-          "Cuando creas una cuenta en ShortTerm, recopilamos tu dirección de email y, si eliges iniciar sesión con Google, la información básica de tu perfil de Google necesaria para la autenticación.",
-          "También recopilamos la información de tu perfil: nombre, nacionalidad, idiomas que hablas, foto de perfil y preferencias de estilo de vida (hábitos, horarios, si fumas, si tienes mascotas). Esta información se usa únicamente para mostrar compatibilidad entre anfitriones y buscadores.",
-          "Si publicas una habitación como anfitrión, recopilamos los datos de esa publicación: dirección, ubicación, fotos, precio y reglas de la casa.",
-          "Recopilamos los mensajes que envías por el chat con otros usuarios dentro de la app, una vez que hicieron match.",
-          "Recopilamos un token de notificaciones push de tu dispositivo, para poder enviarte notificaciones sobre tu actividad en la app."
+          "Los anfitriones publican su habitación con sus fechas, por unas semanas o long term, y quienes buscan habitación filtran por ciudad, barrio y fechas. Quien busca envía una solicitud desde la app y con ella se abre el chat con el anfitrión. Cuando ambas personas están de acuerdo, confirman el match dentro de la app — eso cierra la publicación y habilita las reviews mutuas entre ambos."
         ]
       },
       {
-        "heading": "2. Con quién compartimos datos",
+        "heading": "¿ShortTerm gestiona reservas o pagos?",
         "body": [
-          "No vendemos tus datos. Compartimos información con los siguientes proveedores, que procesan datos en nuestro nombre para que la app funcione:"
-        ],
-        "list": [
-          "Supabase — base de datos, autenticación y almacenamiento de archivos (infraestructura de hosting).",
-          "Google — únicamente si eliges iniciar sesión con Google (OAuth).",
-          "Sentry — monitoreo de errores y fallos, incluyendo repeticiones de sesión (session replay), que pueden incluir datos personales.",
-          "Brevo — envío de emails transaccionales, por ejemplo notificaciones sobre reportes.",
-          "Expo/EAS — entrega de notificaciones push."
+          "No. ShortTerm solo conecta personas — no hay flujo de reserva ni procesamiento de pagos dentro de la app. El precio, las normas de la casa y las fechas de entrada/salida se acuerdan directamente entre el anfitrión y el huésped, fuera de la app."
         ]
       },
       {
-        "heading": "3. Para qué usamos tus datos",
+        "heading": "No puedo confirmar un match. ¿Qué está pasando?",
         "body": [
-          "Usamos tus datos para conectar a anfitriones con buscadores, habilitar el chat dentro de la app, enviarte notificaciones transaccionales, procesar reportes de seguridad y corregir errores de la aplicación."
+          "Un match necesita que ambas personas lo confirmen desde su lado — si ya confirmaste pero la publicación sigue apareciendo como abierta, es probable que la otra persona todavía no haya confirmado. Cuando ambos confirman, la publicación se cierra automáticamente y el match pasa a tus solicitudes confirmadas."
         ]
       },
       {
-        "heading": "4. Para qué NO usamos tus datos",
+        "heading": "Mi publicación (o una solicitud) desapareció. ¿Qué pasó?",
         "body": [
-          "ShortTerm no procesa pagos: la app no tiene una función de pago ni de reserva, así que no recopilamos ni procesamos datos de tarjetas o medios de pago.",
-          "No usamos tus datos para segmentación publicitaria (ad targeting).",
-          "No vendemos tus datos a terceros."
+          "Las publicaciones y solicitudes vencen automáticamente cuando su rango de fechas ya pasó, y la app también cierra las solicitudes ligadas a una publicación que fue pausada o eliminada. Revisa la sección de archivadas en tu lista de solicitudes — ahí quedan las publicaciones y solicitudes vencidas o eliminadas en lugar de borrarse directamente."
         ]
       },
       {
-        "heading": "5. Tus derechos",
+        "heading": "¿Cómo cambio entre buscar habitación y ofrecer una?",
         "body": [
-          "Puedes solicitar acceso, corrección o eliminación de tus datos personales en cualquier momento escribiéndonos a la dirección de contacto que figura al final de este documento."
+          "Abre el menú (el ícono ☰ arriba de la app) y elige \"Cambiar a\" — cualquier cuenta puede pasar de buscar habitación a ofrecer una en cualquier momento, no hay un tipo de cuenta separado."
         ]
       },
       {
-        "heading": "6. Retención y eliminación de datos",
+        "heading": "¿Cómo reporto a un usuario o una publicación?",
         "body": [
-          "Cuando eliminas tu cuenta desde la app, tu perfil se elimina siguiendo el flujo de borrado de la aplicación. Los plazos exactos de retención de cada tipo de dato están sujetos a revisión legal y de producto, y se detallarán en la versión final de este documento."
+          "Usa el ícono de bandera para reportar en el perfil o la publicación, o el botón \"Reportar\" dentro de la información de seguridad de una conversación. Nuestro equipo revisa cada reporte que recibimos."
         ]
       },
       {
-        "heading": "7. Contacto",
+        "heading": "¿Cómo elimino mi cuenta?",
         "body": [
-          "Para consultas sobre esta política o sobre tus datos personales, escríbenos a privacidad@shortterm-app.com."
+          "Ve a Configuración → Eliminar cuenta. Esto cierra tus publicaciones activas, retira tus solicitudes pendientes, y es permanente — no se puede deshacer desde la app."
+        ]
+      },
+      {
+        "heading": "¿Qué pasa con mis datos?",
+        "body": [
+          "Consulta nuestra Política de privacidad para el detalle completo de qué recopilamos y con quién lo compartimos."
         ]
       }
     ]
   },
+  "terms": {
+    "title": "Términos de servicio",
+    "effectiveDate": "Fecha de entrada en vigor: {date}",
+    "draftNotice": "Borrador — este documento todavía no fue revisado por un abogado. No está vigente y no debe usarse como referencia. Se publica aquí solo para poder revisarlo.",
+    "englishOnlyNotice": "Este documento está disponible únicamente en inglés. La versión en inglés es la que rige y la que se aplica a tu uso de ShortTerm.",
+    "tableOfContents": "Contenido"
+  },
   "listing": {
     "unavailable": {
-      "title": "Esta publicación ya no está disponible",
-      "description": "Puede que haya sido eliminada o que ya no esté activa. Descarga la app de ShortTerm para ver otras habitaciones disponibles."
+      "title": "Esta habitación ya no está disponible",
+      "description": "Puede que el anfitrión ya haya confirmado un match o que la publicación se haya cerrado. En la app de ShortTerm hay otras habitaciones esperándote."
     },
-    "fromLabel": "desde",
-    "weekLabel": "por semana",
-    "couplesLabel": "Precio para parejas",
-    "bedroomsLabel": "habitaciones",
-    "bathroomLabel": "baño",
-    "bathroomsLabel": "baños",
-    "guestsLabel": "huéspedes",
-    "gateTitle": "Instala la app para ver más",
-    "gateDescription": "Instala la app para ver más fotos, contactar al anfitrión y coordinar tu estadía.",
-    "openInApp": "Abrir en la app",
+    "unavailablePaused": {
+      "title": "Esta habitación no está disponible por ahora",
+      "description": "El anfitrión pausó la publicación y puede volver a activarla más adelante. Mientras tanto, busca otras habitaciones en la app."
+    },
+    "stayType": {
+      "long_term": "Long term"
+    },
+    "newBadge": "¡Nueva!",
+    "priceWeekly": "${amount} AUD / semana",
+    "priceWeeklyCouples": "${amount} AUD / semana para parejas",
+    "availableFrom": "Disponible desde {date}",
+    "availableRange": "Habitación disponible {startDate} – {endDate}",
+    "mapLocked": "Ver la ubicación en el mapa desde la app",
+    "morePhotos": "Más fotos en la app",
+    "allPhotos": "Ver las {count} fotos en la app",
+    "detailsSectionTitle": "La habitación y la casa",
+    "bedroomsLabel": "Dormitorios",
+    "bathroomsLabel": "Baños",
+    "privateBathroomLabel": "Baño",
+    "privateBathroom": {
+      "yes": "Baño propio",
+      "no": "Baño compartido"
+    },
+    "billsIncludedLabel": "Servicios",
+    "billsIncluded": {
+      "no": "Servicios no incluidos",
+      "yes": "Servicios incluidos"
+    },
+    "genderPreferenceLabel": "Para quién es la habitación",
+    "genderPreference": {
+      "female_only": "Solo chicas",
+      "male_only": "Solo chicos"
+    },
+    "acceptsCouplesLabel": "Parejas",
+    "acceptsCouples": {
+      "yes": "Acepta parejas",
+      "no": "No acepta parejas"
+    },
+    "languagesSectionTitle": "Idiomas",
+    "languages": {
+      "es": "Español",
+      "en": "Inglés",
+      "pt": "Portugués",
+      "fr": "Francés",
+      "de": "Alemán",
+      "it": "Italiano",
+      "zh": "Chino",
+      "ar": "Árabe",
+      "hi": "Hindi",
+      "ru": "Ruso",
+      "ja": "Japonés",
+      "ko": "Coreano",
+      "nl": "Neerlandés",
+      "vi": "Vietnamita",
+      "id": "Indonesio",
+      "tr": "Turco",
+      "sv": "Sueco",
+      "ms": "Malayo",
+      "other": "Otro"
+    },
+    "hostSectionTitle": "Anfitrión",
+    "hostLocked": "Conoce al anfitrión: su perfil y las reseñas de otros huéspedes.",
+    "householdSectionTitle": "Quiénes viven en la casa",
+    "householdSize": "{count, plural, one {Aquí vive # persona} other {Aquí viven # personas}}",
+    "householdLocked": "Descubre quiénes viven en la casa y qué tienen en común contigo.",
+    "lockedAction": "Ver en la app",
+    "requestCta": "Solicitar habitación",
+    "requestCtaHint": "En la app de ShortTerm · iOS y Android",
+    "gate": {
+      "title": "Esta habitación te espera en la app",
+      "description": "Descarga ShortTerm para ver la publicación completa y solicitarla.",
+      "perks": [
+        "Todas las fotos y la descripción completa",
+        "Quiénes viven en la casa y qué tienen en común contigo",
+        "El perfil y las reseñas del anfitrión",
+        "Solicitar la habitación y chatear con el anfitrión",
+        "Alertas cuando aparezcan habitaciones como esta"
+      ]
+    },
+    "openInApp": "¿Ya tienes la app? Ábrela aquí",
     "metadataTitle": "{title} · ShortTerm",
-    "metadataUnavailableTitle": "Publicación no disponible · ShortTerm",
-    "metadataDescription": "{location} · {bedrooms} habitaciones · desde {date}"
+    "metadataUnavailableTitle": "Habitación no disponible · ShortTerm"
   }
 }
