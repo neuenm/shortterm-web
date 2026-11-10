@@ -12,7 +12,9 @@
     "terms": "Términos",
     "help": "Ayuda",
     "languageSwitcher": "Idioma",
-    "download": "Descargar"
+    "download": "Descargar",
+    "legalNotice": "Aviso legal",
+    "deleteAccount": "Eliminar cuenta"
   },
   "hero": {
     "eyebrow": "Una nueva forma de encontrar dónde quedarte",
@@ -122,21 +124,54 @@
   "footer": {
     "tagline": "Estadías cortas. Historias largas.",
     "contactLabel": "Contacto",
-    "contactEmail": "hola@shortterm-app.com",
+    "contactEmail": "support@shortterm-app.com",
     "copyright": "© {year} ShortTerm. Todos los derechos reservados."
   },
-  "privacy": {
-    "title": "Política de privacidad",
+  "legal": {
+    "titles": {
+      "terms": "Términos de servicio",
+      "privacy": "Política de privacidad",
+      "legalNotice": "Aviso legal"
+    },
     "effectiveDate": "Fecha de entrada en vigor: {date}",
-    "draftNotice": "Borrador — este documento todavía no fue revisado por un abogado. No está vigente y no debe usarse como referencia. Se publica aquí solo para poder revisarlo.",
-    "englishOnlyNotice": "Este documento está disponible únicamente en inglés. La versión en inglés es la que rige y la que se aplica a tu uso de ShortTerm.",
+    "draftNotice": "Todavía no está vigente: esta versión entrará en vigor en la fecha indicada arriba, cuando se publique.",
+    "spanishPrevailsNotice": "Esta es la versión en inglés. Si no coinciden, prevalece la <link>versión en español</link>.",
     "tableOfContents": "Contenido"
+  },
+  "deleteAccount": {
+    "title": "Eliminar tu cuenta de ShortTerm",
+    "intro": "Esta página explica cómo eliminar tu cuenta en ShortTerm, la app que publica {developer}, y qué pasa con tus datos al hacerlo.",
+    "inAppHeading": "Desde la app (lo más rápido)",
+    "inAppSteps": [
+      "Abre ShortTerm e inicia sesión.",
+      "Abre el menú (☰) y entra en Configuración.",
+      "Toca «Eliminar cuenta», al final.",
+      "Si usas contraseña, escríbela. Después confirma. La cuenta se elimina al momento y se cierra tu sesión."
+    ],
+    "byEmailHeading": "Si no puedes usar la app",
+    "byEmailBody": "Escríbenos desde el email de tu cuenta con el asunto «{subject}». Comprobaremos que la petición es tuya, eliminaremos la cuenta en un plazo máximo de un mes y te lo confirmaremos por email.",
+    "emailSubject": "Eliminar mi cuenta",
+    "deletedHeading": "Qué se borra",
+    "deletedItems": [
+      "Tu acceso: tu email y tu contraseña.",
+      "Tu perfil: nombre, foto, bio, fecha de nacimiento, nacionalidad y todos los datos de hábitos y viaje. Solo queda un registro anónimo marcado como eliminado.",
+      "Tus alertas de búsqueda, notificaciones, ajustes de notificaciones, los bloqueos que hiciste, tus mensajes al soporte y los tokens de notificaciones de tus dispositivos.",
+      "Tus publicaciones se cierran y se borra su dirección exacta. Tus solicitudes pendientes se retiran."
+    ],
+    "keptHeading": "Qué se conserva y durante cuánto tiempo",
+    "keptItems": [
+      "Las conversaciones, matches confirmados y reviews en los que participa otro miembro se quedan en el historial de esa persona, como de una cuenta eliminada. Se borran 30 días después de que las dos cuentas estén eliminadas.",
+      "Las denuncias que hiciste o que se hicieron sobre ti: 24 meses.",
+      "Las estadísticas de uso ya enviadas con tu permiso (ligadas a un identificador interno, nunca a tu email): 12 meses. Los informes de errores: hasta 90 días.",
+      "Las copias de seguridad se sobrescriben en 7 días."
+    ],
+    "privacyNote": "La <link>Política de privacidad</link> lo explica todo en detalle."
   },
   "help": {
     "title": "Centro de ayuda",
     "intro": "Respuestas a las preguntas que más recibimos. ¿No encontraste la tuya? Escríbenos — mira el cuadro de contacto al final de esta página.",
     "stillNeedHelp": "¿Todavía necesitas ayuda? Escríbenos a",
-    "contactEmail": "hola@shortterm-app.com",
+    "contactEmail": "support@shortterm-app.com",
     "sections": [
       {
         "heading": "¿Cómo funciona ShortTerm?",
@@ -177,7 +212,8 @@
       {
         "heading": "¿Cómo elimino mi cuenta?",
         "body": [
-          "Ve a Configuración → Eliminar cuenta. Esto cierra tus publicaciones activas, retira tus solicitudes pendientes, y es permanente — no se puede deshacer desde la app."
+          "Ve a Configuración → Eliminar cuenta. Esto cierra tus publicaciones activas, retira tus solicitudes pendientes, y es permanente — no se puede deshacer desde la app.",
+          "Si no puedes abrir la app, consulta la página Eliminar cuenta de esta web."
         ]
       },
       {
@@ -187,13 +223,6 @@
         ]
       }
     ]
-  },
-  "terms": {
-    "title": "Términos de servicio",
-    "effectiveDate": "Fecha de entrada en vigor: {date}",
-    "draftNotice": "Borrador — este documento todavía no fue revisado por un abogado. No está vigente y no debe usarse como referencia. Se publica aquí solo para poder revisarlo.",
-    "englishOnlyNotice": "Este documento está disponible únicamente en inglés. La versión en inglés es la que rige y la que se aplica a tu uso de ShortTerm.",
-    "tableOfContents": "Contenido"
   },
   "listing": {
     "unavailable": {
@@ -227,6 +256,11 @@
     "billsIncluded": {
       "no": "Servicios no incluidos",
       "yes": "Servicios incluidos"
+    },
+    "parkingLabel": "Estacionamiento",
+    "parking": {
+      "no": "Sin estacionamiento",
+      "yes": "Con estacionamiento"
     },
     "genderPreferenceLabel": "Para quién es la habitación",
     "genderPreference": {

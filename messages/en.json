@@ -12,7 +12,9 @@
     "terms": "Terms",
     "help": "Help",
     "languageSwitcher": "Language",
-    "download": "Download"
+    "download": "Download",
+    "legalNotice": "Legal notice",
+    "deleteAccount": "Delete account"
   },
   "hero": {
     "eyebrow": "A new way to find where to stay",
@@ -122,21 +124,54 @@
   "footer": {
     "tagline": "Short stays. Long stories.",
     "contactLabel": "Contact",
-    "contactEmail": "hola@shortterm-app.com",
+    "contactEmail": "support@shortterm-app.com",
     "copyright": "© {year} ShortTerm. All rights reserved."
   },
-  "privacy": {
-    "title": "Privacy Policy",
+  "legal": {
+    "titles": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "legalNotice": "Legal notice"
+    },
     "effectiveDate": "Effective date: {date}",
-    "draftNotice": "Draft — this document has not yet been reviewed by a lawyer. It is not in force and must not be relied on. It is published here only so it can be reviewed.",
-    "englishOnlyNotice": "This document is available in English only. The English version is the operative one, and it is the version that applies to your use of ShortTerm.",
+    "draftNotice": "Not yet in force — this version will take effect on the date shown above, once it is published.",
+    "spanishPrevailsNotice": "This is the English version. The <link>Spanish version</link> prevails if the two differ.",
     "tableOfContents": "Contents"
+  },
+  "deleteAccount": {
+    "title": "Delete your ShortTerm account",
+    "intro": "This page explains how to delete your account in ShortTerm, the app published by {developer}, and what happens to your data when you do.",
+    "inAppHeading": "From the app (the quickest way)",
+    "inAppSteps": [
+      "Open ShortTerm and sign in.",
+      "Open the menu (☰) and go to Settings.",
+      "Tap \"Delete account\" at the bottom.",
+      "If you use a password, enter it. Then confirm. Your account is deleted immediately and you're signed out."
+    ],
+    "byEmailHeading": "If you can't use the app",
+    "byEmailBody": "Write to us from the email address of your account with the subject \"{subject}\". We will check that the request is yours, delete the account within one month at most, and confirm it to you by email.",
+    "emailSubject": "Delete my account",
+    "deletedHeading": "What is deleted",
+    "deletedItems": [
+      "Your sign-in: your email address and your password.",
+      "Your profile: name, photo, bio, date of birth, nationality and every habit and travel detail. Only an anonymous record marked as deleted remains.",
+      "Your search alerts, notifications, notification settings, the blocks you made, your messages to support and your devices' notification tokens.",
+      "Your listings are closed and their exact address is erased. Your pending requests are withdrawn."
+    ],
+    "keptHeading": "What is kept, and for how long",
+    "keptItems": [
+      "Conversations, confirmed matches and reviews involving another member stay as part of that person's history, shown as coming from a deleted account. They are erased 30 days after both accounts have been deleted.",
+      "Reports you made or that were made about you: 24 months.",
+      "Usage statistics already sent with your permission (linked to an internal id, never to your email): 12 months. Error reports: up to 90 days.",
+      "Backups are overwritten within 7 days."
+    ],
+    "privacyNote": "The <link>Privacy Policy</link> explains all of this in detail."
   },
   "help": {
     "title": "Help center",
     "intro": "Answers to the questions we hear most often. Can't find yours? Write to us — see the contact box at the bottom of this page.",
     "stillNeedHelp": "Still need help? Write to us at",
-    "contactEmail": "hola@shortterm-app.com",
+    "contactEmail": "support@shortterm-app.com",
     "sections": [
       {
         "heading": "How does ShortTerm work?",
@@ -177,7 +212,8 @@
       {
         "heading": "How do I delete my account?",
         "body": [
-          "Go to Settings → Delete account. This closes your active listings, withdraws your pending requests, and is permanent — it can't be undone from inside the app."
+          "Go to Settings → Delete account. This closes your active listings, withdraws your pending requests, and is permanent — it can't be undone from inside the app.",
+          "If you can't open the app, see the Delete account page on this website."
         ]
       },
       {
@@ -187,13 +223,6 @@
         ]
       }
     ]
-  },
-  "terms": {
-    "title": "Terms of Service",
-    "effectiveDate": "Effective date: {date}",
-    "draftNotice": "Draft — this document has not yet been reviewed by a lawyer. It is not in force and must not be relied on. It is published here only so it can be reviewed.",
-    "englishOnlyNotice": "This document is available in English only. The English version is the operative one, and it is the version that applies to your use of ShortTerm.",
-    "tableOfContents": "Contents"
   },
   "listing": {
     "unavailable": {
@@ -227,6 +256,11 @@
     "billsIncluded": {
       "no": "Bills not included",
       "yes": "Bills included"
+    },
+    "parkingLabel": "Parking",
+    "parking": {
+      "no": "No off-street parking",
+      "yes": "Off-street parking"
     },
     "genderPreferenceLabel": "Who the room is for",
     "genderPreference": {

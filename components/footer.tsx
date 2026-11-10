@@ -24,7 +24,7 @@ export default async function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 sm:justify-end">
             <Link href="/help" className="text-ink hover:text-primary">
               {t("nav.help")}
             </Link>
@@ -33,6 +33,12 @@ export default async function Footer() {
             </Link>
             <Link href="/privacy" className="text-ink hover:text-primary">
               {t("nav.privacy")}
+            </Link>
+            <Link href="/legal-notice" className="text-ink hover:text-primary">
+              {t("nav.legalNotice")}
+            </Link>
+            <Link href="/delete-account" className="text-ink hover:text-primary">
+              {t("nav.deleteAccount")}
             </Link>
             <a
               href={`mailto:${t("footer.contactEmail")}`}

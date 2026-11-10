@@ -2,7 +2,7 @@ import { cache } from "react";
 import { supabase } from "@/lib/supabase";
 
 // The exact (and only) shape this RPC returns — matches the mobile app's
-// supabase/migrations/20261109100000_listing_preview_teaser_fields.sql exactly.
+// supabase/migrations/20261110130000_listing_has_parking.sql exactly.
 // Do not select/assume any other listing field: exact_address, latitude/
 // longitude, host info, description (house rules included), bond_amount and the
 // household breakdown are all intentionally NOT exposed to anonymous visitors.
@@ -32,6 +32,9 @@ export type ListingPreview = {
   household_size?: number | null; // host included, like the app's "Aquí viven N personas"
   bills_included?: boolean | null;
   created_at?: string;
+  // Off-street parking for the guest (20261110130000). Optional like the teaser fields: until
+  // that migration is applied the RPC doesn't return it and the page just skips the cell.
+  has_parking?: boolean | null;
 };
 
 // The app's NEW_LISTING_WINDOW_DAYS / isNewListing (src/lib/listings.ts).

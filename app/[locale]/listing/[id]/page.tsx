@@ -204,6 +204,11 @@ export default async function ListingPreviewPage({
             {t(`billsIncluded.${listing.bills_included ? "yes" : "no"}`)}
           </FactCell>
         ) : null}
+        {listing.has_parking != null ? (
+          <FactCell icon="directionsCar" label={t("parkingLabel")}>
+            {t(`parking.${listing.has_parking ? "yes" : "no"}`)}
+          </FactCell>
+        ) : null}
         {listing.gender_preference && listing.gender_preference !== "any" ? (
           <FactCell icon="person" label={t("genderPreferenceLabel")}>
             {t(`genderPreference.${listing.gender_preference}`)}
