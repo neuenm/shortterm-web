@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import StoreBadges from "@/components/store-badges";
 import PhoneMockup from "@/components/phone-mockup";
 
 export default function HeroSection() {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <section className="relative w-full overflow-hidden bg-cream">
@@ -52,7 +53,7 @@ export default function HeroSection() {
         </div>
 
         <div className="shrink-0">
-          <PhoneMockup variant="listing" />
+          <PhoneMockup src={`/app-screens/${locale}/01-search.jpg`} alt={t("hero.screenshotAlt")} eager />
         </div>
       </div>
     </section>

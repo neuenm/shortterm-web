@@ -9,7 +9,7 @@ export const termsEs = buildDocument({
       `Estos Términos de servicio (los **Términos**) son el contrato entre tú y ${LEGAL.holder}, que ofrece el servicio con el nombre comercial ${LEGAL.tradeName} (**ShortTerm**, **nosotros**). Regulan el uso de la app ShortTerm y de la web ${LEGAL.website} (juntas, el **Servicio**).`,
     ),
     p(
-      "Para usar el Servicio tienes que confirmar que tienes 18 años o más y aceptar estos Términos en la pantalla «Antes de empezar» de la app. Si no estás de acuerdo con ellos, no uses el Servicio. Cómo tratamos tus datos personales lo explica la Política de privacidad.",
+      "Para usar el Servicio tienes que confirmar que tienes 18 años o más y aceptar estos Términos. Lo haces en la app al crear tu cuenta o entrar en ella, con el botón junto al que aparece el aviso «Al continuar, confirmas que tienes 18 años o más y aceptas los Términos de servicio». Si no estás de acuerdo con ellos, no uses el Servicio. Cómo tratamos tus datos personales lo explica la Política de privacidad.",
     ),
     callout(
       "**Tres cosas importantes antes de seguir.** Primero: ShortTerm solo pone en contacto a personas; no alquilamos habitaciones, no cobramos pagos, no guardamos bonds ni actuamos como agente de nadie. Segundo: no verificamos la identidad de nadie ni comprobamos que un perfil, una publicación o una review sean ciertos. Tercero: conocer y vivir con alguien que conociste por internet tiene riesgos reales; la sección §{safety} explica las precauciones que te pedimos.",
@@ -97,7 +97,7 @@ export const termsEs = buildDocument({
       clauses: [
         [
           p(
-            "**ShortTerm es solo para mayores de 18 años.** Para usar el Servicio tienes que confirmar, en la pantalla «Antes de empezar», que tienes 18 años o más.",
+            "**ShortTerm es solo para mayores de 18 años.** Para usar el Servicio tienes que confirmar que tienes 18 años o más, lo que haces al crear tu cuenta o entrar en la app.",
           ),
         ],
         [
@@ -180,7 +180,7 @@ export const termsEs = buildDocument({
         ],
         [
           p(
-            "**Información sobre las personas que ya viven contigo.** Una publicación puede incluir datos agregados de la casa: cuántas personas viven en ella y cuántas fuman, tienen mascotas, trabajan en régimen FIFO, sus horarios, ocupación, limpieza, visitas, consumo de alcohol y energía social, además de un desglose por nacionalidad y por franja de edad, y sus gustos de comida, aficiones y música. Son recuentos, nunca nombres. No publicamos nunca el nombre, la foto ni los datos de contacto de un compañero de casa.",
+            "**Información sobre las personas que ya viven contigo.** Una publicación puede incluir datos agregados de la casa: cuántas personas viven en ella y cuántas fuman, trabajan en régimen FIFO, sus horarios, ocupación y consumo de alcohol, además de un desglose por nacionalidad y por franja de edad, y sus gustos de comida, aficiones y música; y cómo es la casa en general (lo ordenada que está, la frecuencia de las visitas, si hay mascotas, su ambiente). Lo que se refiere a las personas son recuentos, nunca nombres. No publicamos nunca el nombre, la foto ni los datos de contacto de un compañero de casa.",
           ),
         ],
         [
@@ -190,7 +190,7 @@ export const termsEs = buildDocument({
         ],
         [
           p(
-            "**Cuánto se publica de tu dirección.** El barrio que elijas se muestra siempre. La dirección exacta es opcional: si la rellenas, la ven los miembros con sesión iniciada que abren tu publicación en la app, y al tocar el mapa se abre Google Maps con esa dirección. No aparece en la página web pública que se abre al compartir el enlace de una publicación, que muestra solo el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma, si se aceptan parejas, si hay baño privado, si hay estacionamiento, para quién es la habitación, cuántas personas viven en la casa, la foto de portada, el número de fotos y si la publicación es nueva. Rellena la dirección exacta solo si te parece bien que la vean los miembros.",
+            "**Cuánto se publica de tu dirección.** El barrio que elijas se muestra siempre. La dirección exacta es opcional: si la rellenas, la ven los miembros con sesión iniciada que abren tu publicación en la app, y al tocar el mapa se abre Google Maps con esa dirección. No aparece en la página web pública que se abre al compartir el enlace de una publicación, que muestra solo el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma, si se aceptan parejas, si hay baño privado, si hay parking, para quién es la habitación, cuántas personas viven en la casa, la foto de portada, el número de fotos y si la publicación es nueva. Rellena la dirección exacta solo si te parece bien que la vean los miembros.",
           ),
         ],
         [
@@ -669,7 +669,7 @@ export const termsEs = buildDocument({
       clauses: [
         [
           p(
-            "El contrato se celebra en la app: creas tu cuenta (con email y contraseña, confirmando tu email, o con Google), y en la pantalla «Antes de empezar» confirmas que tienes 18 años o más y aceptas estos Términos. Antes de aceptar puedes leer estos Términos y la Política de privacidad, y revisar y corregir los datos que hayas introducido; después puedes cambiarlos desde la app.",
+            "El contrato se celebra en la app. Junto a los botones para crear tu cuenta (con email y contraseña, o con Google) y para entrar en ella, la app muestra el aviso «Al continuar, confirmas que tienes 18 años o más y aceptas los Términos de servicio», con enlaces a estos Términos y a la Política de privacidad: al tocar uno de esos botones confirmas que tienes 18 años o más y aceptas estos Términos. Si cambian y ya tenías la sesión iniciada, la app te los vuelve a mostrar con el mismo aviso y un botón «Aceptar y continuar». Antes de aceptar puedes leer estos Términos y la Política de privacidad, y revisar y corregir los datos que hayas introducido; después puedes cambiarlos desde la app.",
           ),
         ],
         [

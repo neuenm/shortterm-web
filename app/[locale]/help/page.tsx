@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getPathname } from "@/i18n/navigation";
+import { getPathname, Link } from "@/i18n/navigation";
 
-type Section = { heading: string; body: string[] };
+/**
+ * The help center the app's Settings → Help center opens. Every answer describes the app as it
+ * behaves today (labels, where each action lives, what happens after it), so a change to any
+ * of those in the app means updating the matching answer here, in both locales.
+ */
+type Question = { heading: string; body: string[] };
+type Topic = { id: string; title: string; questions: Question[] };
 
 export async function generateMetadata({
   params,
@@ -29,7 +35,35 @@ export default async function HelpPage({
   setRequestLocale(locale);
 
   const t = await getTranslations("help");
-  const sections = t.raw("sections") as Section[];
+  const topics = t.raw("topics") as Topic[];
+  const linkClassName = "font-semibold text-primary hover:underline";
+
+  // Answers carry inline markup (app labels in <b>, links to other pages and to the safety
+  // topic), so each paragraph goes through t.rich by its path instead of rendering t.raw.
+  const answer = (path: string) =>
+    t.rich(path, {
+      b: (chunks) => <strong className="font-semibold text-ink">{chunks}</strong>,
+      privacy: (chunks) => (
+        <Link href="/privacy" className={linkClassName}>
+          {chunks}
+        </Link>
+      ),
+      deleteAccount: (chunks) => (
+        <Link href="/delete-account" className={linkClassName}>
+          {chunks}
+        </Link>
+      ),
+      safety: (chunks) => (
+        <a href="#safety" className={linkClassName}>
+          {chunks}
+        </a>
+      ),
+      email: (chunks) => (
+        <a href={`mailto:${t("contactEmail")}`} className={linkClassName}>
+          {chunks}
+        </a>
+      ),
+    });
 
   return (
     <div className="w-full bg-cream">
@@ -39,13 +73,38 @@ export default async function HelpPage({
         </h1>
         <p className="mt-4 text-muted">{t("intro")}</p>
 
-        <div className="mt-10 flex flex-col gap-8">
-          {sections.map((section) => (
-            <section key={section.heading}>
-              <h2 className="text-xl font-bold text-ink">{section.heading}</h2>
-              <div className="mt-2 flex flex-col gap-3 text-muted">
-                {section.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+        <nav aria-label={t("topicsLabel")} className="mt-8 flex flex-wrap gap-2">
+          {topics.map((topic) => (
+            <a
+              key={topic.id}
+              href={`#${topic.id}`}
+              className="rounded-full bg-warm-gray px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:text-primary"
+            >
+              {topic.title}
+            </a>
+          ))}
+        </nav>
+
+        <div className="mt-12 flex flex-col gap-14">
+          {topics.map((topic, topicIndex) => (
+            <section key={topic.id} id={topic.id} className="scroll-mt-8">
+              <h2 className="text-2xl font-extrabold text-ink">{topic.title}</h2>
+              <div className="mt-6 flex flex-col gap-8">
+                {topic.questions.map((question, questionIndex) => (
+                  <div key={question.heading}>
+                    <h3 className="text-lg font-bold text-ink">
+                      {question.heading}
+                    </h3>
+                    <div className="mt-2 flex flex-col gap-3 text-muted">
+                      {question.body.map((paragraph, paragraphIndex) => (
+                        <p key={paragraph}>
+                          {answer(
+                            `topics.${topicIndex}.questions.${questionIndex}.body.${paragraphIndex}`,
+                          )}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>

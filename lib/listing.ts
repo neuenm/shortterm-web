@@ -44,9 +44,14 @@ export function isNewListing(createdAt: string): boolean {
   return Date.now() - new Date(createdAt).getTime() < NEW_LISTING_WINDOW_DAYS * 24 * 60 * 60 * 1000;
 }
 
+// Listing ids are UUIDs. Anything else (a bot walking random URLs, a mangled shared link) can't
+// match a listing, so it gets the not-found page without spending a Supabase call.
+const LISTING_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 // cache(): generateMetadata and the page both ask for the same listing in one request.
 export const getListingPreview = cache(
   async (id: string): Promise<ListingPreview | null> => {
+    if (!LISTING_ID_PATTERN.test(id)) return null;
     const { data, error } = await supabase
       .rpc("get_listing_preview", { p_listing_id: id })
       .maybeSingle();

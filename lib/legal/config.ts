@@ -39,8 +39,9 @@ export const LEGAL = {
   mailboxProvider: "Google (Gmail)",
 
   /**
-   * ISO date the current version takes effect. Set it to the day the app version with the
-   * accept-terms screen is live in the stores, together with PUBLISHED below.
+   * ISO date the current version takes effect. Set it to the day the app version that records
+   * the Terms acceptance (the notice under its login/register buttons) is live in the stores,
+   * together with PUBLISHED below.
    */
   effectiveDate: "2026-11-10",
 } as const;

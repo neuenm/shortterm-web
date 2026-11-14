@@ -69,7 +69,9 @@ export async function generateMetadata({
   ]
     .filter(Boolean)
     .join(" · ");
-  const image = listing.cover_photo_url ?? "/isotipo.png";
+  // No photo: the site's own link-preview banner rather than the square logo, which
+  // summary_large_image crops badly.
+  const image = listing.cover_photo_url ?? `/og-${locale}.png`;
 
   return {
     title,

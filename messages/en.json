@@ -21,7 +21,8 @@
     "title": "Find your next room, no hassle.",
     "subtitle": "ShortTerm connects people who have a room available, for a few weeks or long term, with people looking for one. Publish or search, request the room, and coordinate your stay by chat.",
     "ctaHint": "Download the app when it's available:",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "screenshotAlt": "ShortTerm app search results: rooms in Sydney for your dates"
   },
   "howItWorks": {
     "title": "How it works",
@@ -87,7 +88,11 @@
   },
   "appPreview": {
     "title": "See ShortTerm in action",
-    "subtitle": "A quick look at browsing rooms and chatting with your future housemate."
+    "subtitle": "A quick look at browsing rooms and chatting with your future housemate.",
+    "screenshotAlt": {
+      "listing": "A room in the ShortTerm app: photos, weekly price, bond and dates",
+      "chat": "Chat with the host in the ShortTerm app, arranging a visit"
+    }
   },
   "whyShortTerm": {
     "title": "Why ShortTerm",
@@ -170,56 +175,216 @@
   "help": {
     "title": "Help center",
     "intro": "Answers to the questions we hear most often. Can't find yours? Write to us — see the contact box at the bottom of this page.",
+    "topicsLabel": "Topics",
     "stillNeedHelp": "Still need help? Write to us at",
     "contactEmail": "support@shortterm-app.com",
-    "sections": [
+    "topics": [
       {
-        "heading": "How does ShortTerm work?",
-        "body": [
-          "Hosts publish their room with its dates, for a few weeks or long term, and people looking for a room filter by city, suburb and dates. The person searching sends a request from the app, which opens the chat with the host. Once both people agree, they confirm the match inside the app — that closes the listing and unlocks mutual reviews between the two of you."
+        "id": "getting-started",
+        "title": "Getting started",
+        "questions": [
+          {
+            "heading": "How does ShortTerm work?",
+            "body": [
+              "Hosts publish their room with its dates: short term, with a move-in and a move-out date, or long term, from a set date with no end date. People looking for a room filter by city, suburb, dates, price and what the house is like, and send a request from the app. Each request opens a chat with the host.",
+              "When the host chooses an interested guest and that person confirms, it's a match: the listing closes and, once the stay ends, you can both leave each other a review. In the app you can go through it step by step from the ☰ menu → <b>How matching works</b>."
+            ]
+          },
+          {
+            "heading": "Does ShortTerm cost anything? Does it handle bookings or payments?",
+            "body": [
+              "ShortTerm is currently free, both for searching and for publishing. There are no bookings or payments inside the app: we only connect people. You agree on the price, deposit, house rules and exact dates directly with the other person, and any payment happens outside the app.",
+              "Listing prices are weekly, in Australian dollars (AUD). Never pay anything in advance: read the <safety>safety tips</safety>."
+            ]
+          },
+          {
+            "heading": "How do I switch between looking for a room and offering one?",
+            "body": [
+              "Tap the label under the title on any main tab: it says <b>Searching for a room</b> or <b>Offering a room</b>, next to the ⇄ icon. Each tap switches modes. It's the same account for both, with no separate account types.",
+              "If the label shows a dot, you have unread notifications in the other mode. The Search and Alerts tabs only appear while you're searching for a room; while you're offering one, your alerts are still in the ☰ menu → <b>Search alerts</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "Does ShortTerm handle bookings or payments?",
-        "body": [
-          "No. ShortTerm only connects people — there's no booking flow and no payment processing inside the app. Price, house rules, and move-in/move-out dates are all agreed directly between the host and the guest, outside the app."
+        "id": "searching",
+        "title": "Searching for a room",
+        "questions": [
+          {
+            "heading": "How do I search for a room?",
+            "body": [
+              "On the <b>Search</b> tab, choose the stay type (short term or long term), your dates and, if you like, a city and suburb. You can add nearby suburbs, turn on <b>Searching as a couple</b>, or see <b>Only rooms covering all my dates</b>.",
+              "Under <b>Filters</b> you can set the weekly price, bedrooms, off-street parking and what the house is like: how many people live there and their languages, nationalities and age range. If you complete your profile, each result shows how many things you have in common with the housemates."
+            ]
+          },
+          {
+            "heading": "What are search alerts?",
+            "body": [
+              "An alert saves a search's filters and sends you a notification as soon as a new room that matches is published. Create one with <b>Save as alert</b> from your search results, or from the <b>Alerts</b> tab.",
+              "From there you can see each alert's matches and pause, edit or delete it. Short term alerts expire once their dates pass; long term alerts don't expire."
+            ]
+          },
+          {
+            "heading": "How do I request a room?",
+            "body": [
+              "Open the room you're interested in and tap <b>Request room</b>. Once you confirm, your request reaches the host and a chat opens with a suggested first message that you can change before sending it.",
+              "If you're going with your partner and the room accepts couples, turn on <b>Requesting as a couple</b>: the host will see it on your request, along with the couples price.",
+              "The host looks at your profile to decide, so completing it helps you stand out."
+            ]
+          },
+          {
+            "heading": "Can I change or cancel my request?",
+            "body": [
+              "Yes, from the request's details on the <b>Requests</b> tab. As long as the host hasn't chosen you, you can <b>Edit dates</b> or <b>Cancel request</b>.",
+              "If you canceled it, you can <b>Reactivate request</b> while the room is still available. And if its dates passed without an answer, you can edit it with new dates to try again. If the host paused the listing, you'll have to wait until they reactivate it."
+            ]
+          }
         ]
       },
       {
-        "heading": "I can't confirm a match. What's wrong?",
-        "body": [
-          "A match needs both people to confirm it from their side — if you've confirmed but the listing still shows as open, the other person likely hasn't confirmed yet. Once both confirm, the listing closes automatically and the match moves to your confirmed requests."
+        "id": "hosting",
+        "title": "Publishing a room",
+        "questions": [
+          {
+            "heading": "How do I publish my room?",
+            "body": [
+              "Switch to <b>Offering a room</b> mode and, on Home, tap <b>Publish room</b>. The form walks you through the room, the house and who lives there, step by step. If you leave halfway, we save a draft on your device so you can pick up later (you'll need to add the photos you picked again).",
+              "Once it's live, use <b>Share</b> to send it to WhatsApp or Facebook groups, or to friends, so more people see it."
+            ]
+          },
+          {
+            "heading": "Can I edit my listing?",
+            "body": [
+              "Yes: while the listing is active or paused, you can change the title, description, photos, languages and the information about the housemates.",
+              "Dates, price and other terms (like a private bathroom, bills included, or whether anyone in the house smokes or has pets) stay fixed, because people looking for a room rely on them. If you need to change them, use <b>Clone listing</b>: it opens a new listing with the same details for you to adjust."
+            ]
+          },
+          {
+            "heading": "What's the difference between pausing and deleting a listing?",
+            "body": [
+              "<b>Pause listing</b> hides it from searches without losing anything: pending requests stay where they are, and you can bring it back anytime with <b>Reactivate listing</b>. While it's paused, you can't choose anyone and nobody can confirm a match. A paused short term listing still expires when its dates pass.",
+              "<b>Delete listing</b> is permanent: it stops showing up, we notify interested guests with a pending request, and those requests move to Unmatched. Your conversations aren't lost. To publish it again, open it from Home → <b>Listing history</b> and tap <b>Clone listing</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "My listing (or a request on it) disappeared. What happened?",
-        "body": [
-          "Listings and requests expire automatically once their date range has passed, and the app also closes out requests tied to a listing that was paused or deleted. Check the archived section of your requests list — that's where past, expired, or removed listings and requests end up instead of being deleted outright."
+        "id": "matching",
+        "title": "Requests, matches and stays",
+        "questions": [
+          {
+            "heading": "How does matching work?",
+            "body": [
+              "A match takes two steps. First, the host <b>chooses</b> one of the interested guests who sent a request. Then that person <b>confirms</b> the match, or <b>declines</b> it if they changed their mind. Once they confirm, it's a match: the room is theirs, the listing closes and we let the other interested guests know.",
+              "The host can only choose one person at a time. Until that person confirms, the host can choose someone else or tap <b>Undo choice</b>. They can also pass on a single interested guest with <b>Don't choose</b> without affecting the rest, and change their mind with <b>Reconsider</b> while the listing is still open.",
+              "All of this happens from each request's details, on the <b>Requests</b> tab. Before choosing, check the <safety>safety tips</safety>."
+            ]
+          },
+          {
+            "heading": "I can't confirm the match. What's wrong?",
+            "body": [
+              "You can only confirm after the host chooses you. If your request says <b>Waiting for the host to choose you</b>, the decision is still theirs: we'll let you know when they decide.",
+              "If you've been chosen and still can't confirm, check the request's status: the host may have paused or deleted the listing, the dates may have passed, or they may have chosen someone else.",
+              "If you're the host and can't choose anyone, check that the listing isn't paused."
+            ]
+          },
+          {
+            "heading": "Where can I see my requests and conversations?",
+            "body": [
+              "On the <b>Requests</b> tab, split into three lists: <b>Pending</b> (not resolved yet), <b>Confirmed</b> (matched: upcoming, in progress and completed) and <b>Unmatched</b> (canceled, not chosen, expired or from deleted listings). While you're searching for a room you see the requests you sent; while you're offering one, the ones you received.",
+              "Your conversations are under the messages icon at the top of every tab, and your updates under the notifications icon."
+            ]
+          },
+          {
+            "heading": "My listing (or a request) disappeared. What happened?",
+            "body": [
+              "It's almost never deleted: it just moved to another list. Requests that are no longer pending move to <b>Unmatched</b> on the Requests tab: for example, if the request was canceled, if the host didn't choose it or deleted the listing, if there was a match with someone else, or if its dates passed without an answer. Past listings (matched, expired or deleted) are on Home → <b>Listing history</b>, in Offering a room mode.",
+              "Short term listings and requests expire on their own once their dates pass; long term ones don't expire. A paused listing doesn't disappear: it stays on Home, hidden from searches and with its pending requests.",
+              "To publish it again, open the expired or deleted listing and tap <b>Clone listing</b>."
+            ]
+          },
+          {
+            "heading": "When can I leave a review?",
+            "body": [
+              "When the stay ends, or one month after moving in for a long term stay. The option appears in the request's details, under <b>Confirmed</b>.",
+              "Reviews are published together, once both people have sent theirs, so nobody writes theirs after reading the other one. If only one person has sent theirs, the other has 14 days to leave one; after that, the review that was sent is published anyway and the other can no longer be written."
+            ]
+          }
         ]
       },
       {
-        "heading": "How do I switch between looking for a room and offering one?",
-        "body": [
-          "Open the menu (the ☰ icon at the top of the app) and choose \"Switch to\" — any account can move between searching for a room and offering one at any time, there's no separate account type."
+        "id": "safety",
+        "title": "Safety",
+        "questions": [
+          {
+            "heading": "How do I protect myself from scams?",
+            "body": [
+              "ShortTerm only connects people: we don't handle payments or verify identities. Never pay or leave a deposit in advance, before meeting the other person face to face. Don't share bank details, card numbers or passwords over chat. Visit the room before committing, and be wary of anyone who rushes you or wants to move the conversation off the app.",
+              "These tips are always at hand in every chat, under <b>Safety tips</b>."
+            ]
+          },
+          {
+            "heading": "How do I report a user or a listing?",
+            "body": [
+              "On a profile or a listing, tap the flag icon. In a chat or on a request's details, open <b>Safety tips</b> and tap <b>Report</b>. Pick a reason and, if you like, add details.",
+              "Our team reviews every report, and the reported person isn't notified. When you report a user, we also offer to block them."
+            ]
+          },
+          {
+            "heading": "How do I block or unblock someone?",
+            "body": [
+              "Open your chat or request with that person, go to <b>Safety tips</b> and tap <b>Block</b>. They won't be able to message you or see your listings, and you won't see theirs either. We don't notify them.",
+              "To unblock someone, go to ☰ → <b>Settings → Blocked users</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "How do I report a user or a listing?",
-        "body": [
-          "Use the report flag icon on a profile or listing page, or the \"Report\" button inside a conversation's safety info. Our team reviews every report that comes in."
-        ]
-      },
-      {
-        "heading": "How do I delete my account?",
-        "body": [
-          "Go to Settings → Delete account. This closes your active listings, withdraws your pending requests, and is permanent — it can't be undone from inside the app.",
-          "If you can't open the app, see the Delete account page on this website."
-        ]
-      },
-      {
-        "heading": "What happens to my data?",
-        "body": [
-          "See our Privacy Policy for the full details on what we collect and who we share it with."
+        "id": "account",
+        "title": "Your account and profile",
+        "questions": [
+          {
+            "heading": "Why should I complete my profile?",
+            "body": [
+              "When you sign up we only ask for the basics; the rest is optional. But hosts look at your profile to decide, and with your habits and interests the app works out how many <b>things in common</b> you have with the housemates. If you're offering a room, a complete profile builds more trust with interested guests.",
+              "On the <b>Profile</b> tab you can see your percentage and what's missing. When you reach 100%, you earn the <b>Complete profile</b> badge, which shows next to your name."
+            ]
+          },
+          {
+            "heading": "I'm not getting notifications. What should I do?",
+            "body": [
+              "First, check that notifications for ShortTerm are turned on in your device settings. Then, in ☰ → <b>Settings → Notifications</b>, choose which updates you want: messages, requests, matches, reviews, search alerts and tips.",
+              "Those options control the notifications that reach your phone; inside the app, your updates keep showing under the notifications icon."
+            ]
+          },
+          {
+            "heading": "How do I change or reset my password?",
+            "body": [
+              "If you forgot it, tap <b>Forgot your password?</b> on the sign-in screen and we'll email you a link to create a new one.",
+              "While signed in, you can change it in ☰ → <b>Settings → Password</b>. If you sign in with Google, you can create a password there too."
+            ]
+          },
+          {
+            "heading": "How do I delete my account?",
+            "body": [
+              "Go to ☰ → <b>Settings → Delete account</b>. If you sign in with email, we'll ask for your password to confirm. Your active listings close and your pending requests are withdrawn. It's permanent and can't be undone.",
+              "Conversations and reviews you're part of stay visible to the other person, as their history with you, but without your name or photo.",
+              "If you can't open the app, follow the steps on the <deleteAccount>Delete account</deleteAccount> page."
+            ]
+          },
+          {
+            "heading": "What happens to my data?",
+            "body": [
+              "Our <privacy>Privacy Policy</privacy> explains what data we collect, what we use it for and who we share it with.",
+              "In ☰ → <b>Settings → Privacy</b> you decide whether your age shows on your profile and whether you share usage statistics, which never include your email or your messages."
+            ]
+          },
+          {
+            "heading": "How do I get in touch with the ShortTerm team?",
+            "body": [
+              "From the app, in ☰ → <b>Settings → Contact us</b>: tell us what's going on and we'll reply by email. You can also write to us directly at <email>support@shortterm-app.com</email>."
+            ]
+          }
         ]
       }
     ]

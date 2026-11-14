@@ -1,8 +1,9 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import PhoneMockup from "@/components/phone-mockup";
 
 export default function AppPreviewSection() {
   const t = useTranslations("appPreview");
+  const locale = useLocale();
 
   return (
     <section className="w-full bg-ink">
@@ -14,8 +15,8 @@ export default function AppPreviewSection() {
           <p className="mt-3 text-cream/70">{t("subtitle")}</p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-8">
-          <PhoneMockup variant="listing" />
-          <PhoneMockup variant="chat" />
+          <PhoneMockup src={`/app-screens/${locale}/02-listing.jpg`} alt={t("screenshotAlt.listing")} />
+          <PhoneMockup src={`/app-screens/${locale}/04-chat.jpg`} alt={t("screenshotAlt.chat")} />
         </div>
       </div>
     </section>

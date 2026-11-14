@@ -9,7 +9,7 @@ export const termsEn = buildDocument({
       `These Terms of Service (the **Terms**) are the agreement between you and ${LEGAL.holder}, who offers the service under the trade name ${LEGAL.tradeName} (**ShortTerm**, **we**, **us**). They govern your use of the ShortTerm app and the website ${LEGAL.website} (together, the **Service**).`,
     ),
     p(
-      "To use the Service you have to confirm that you are 18 or older and accept these Terms on the app's \"Before you start\" screen. If you don't agree with them, don't use the Service. How we handle your personal data is explained in the Privacy Policy.",
+      "To use the Service you have to confirm that you are 18 or older and accept these Terms. You do this in the app when you create your account or sign in, with the button shown next to the notice \"By continuing, you confirm you're 18 or older and accept the Terms of Service\". If you don't agree with them, don't use the Service. How we handle your personal data is explained in the Privacy Policy.",
     ),
     callout(
       "**Three things to know before you read on.** First, ShortTerm only puts people in touch: we don't rent out rooms, take payments, hold bonds or act as anyone's agent. Second, we don't verify anyone's identity or check that a profile, a listing or a review is true. Third, meeting and living with someone you met online carries real risk; section §{safety} sets out the precautions we ask you to take.",
@@ -97,7 +97,7 @@ export const termsEn = buildDocument({
       clauses: [
         [
           p(
-            "**ShortTerm is only for people aged 18 or over.** To use the Service you have to confirm, on the \"Before you start\" screen, that you are 18 or older.",
+            "**ShortTerm is only for people aged 18 or over.** To use the Service you have to confirm that you are 18 or older, which you do when you create your account or sign in to the app.",
           ),
         ],
         [
@@ -180,7 +180,7 @@ export const termsEn = buildDocument({
         ],
         [
           p(
-            "**Information about the people who already live with you.** A listing can include aggregate information about the house: how many people live there and how many smoke, have pets, work FIFO, their sleep schedules, occupation, cleanliness, visitors, drinking and social energy, plus a breakdown by nationality and by age bracket, and their food, hobbies and music. These are counts, never names. We never publish a housemate's name, photo or contact details.",
+            "**Information about the people who already live with you.** A listing can include aggregate information about the house: how many people live there and how many smoke, work FIFO, their sleep schedules, occupation and drinking, plus a breakdown by nationality and by age bracket, and their food, hobbies and music; and what the house is like as a whole (how tidy it is, how often there are visitors, whether there are pets, its vibe). What it says about the people is counts, never names. We never publish a housemate's name, photo or contact details.",
           ),
         ],
         [
@@ -657,7 +657,7 @@ export const termsEn = buildDocument({
       clauses: [
         [
           p(
-            "The agreement is made in the app: you create your account (with an email and password, confirming your email, or with Google), and on the \"Before you start\" screen you confirm you are 18 or older and accept these Terms. Before accepting you can read these Terms and the Privacy Policy, and review and correct the details you entered; afterwards you can change them in the app.",
+            "The agreement is made in the app. Next to the buttons to create your account (with an email and password, or with Google) and to sign in, the app shows the notice \"By continuing, you confirm you're 18 or older and accept the Terms of Service\", with links to these Terms and to the Privacy Policy: tapping one of those buttons confirms you are 18 or older and accepts these Terms. If they change while you are already signed in, the app shows them to you again with the same notice and an \"Accept and continue\" button. Before accepting you can read these Terms and the Privacy Policy, and review and correct the details you entered; afterwards you can change them in the app.",
           ),
         ],
         [

@@ -25,6 +25,9 @@ export async function generateMetadata({
 }: LayoutProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  // The 1200×630 link-preview banner, one per language (made by the app repo's marketing/
+  // pipeline, marketing/README.md).
+  const shareImage = { url: `/og-${locale}.png`, width: 1200, height: 630, alt: t("title") };
 
   return {
     metadataBase: new URL("https://www.shortterm-app.com"),
@@ -42,11 +45,11 @@ export async function generateMetadata({
     openGraph: {
       siteName: "ShortTerm",
       locale: locale === "es" ? "es_ES" : "en_US",
-      images: ["/isotipo.png"],
+      images: [shareImage],
     },
     twitter: {
       card: "summary_large_image",
-      images: ["/isotipo.png"],
+      images: [shareImage],
     },
   };
 }

@@ -21,7 +21,8 @@
     "title": "Encuentra tu próxima habitación, sin vueltas.",
     "subtitle": "ShortTerm conecta a personas que tienen una habitación disponible, por unas semanas o long term, con personas que la están buscando. Publica o busca, solicita la habitación y coordina tu estadía por chat.",
     "ctaHint": "Descarga la app cuando esté disponible:",
-    "comingSoon": "Próximamente"
+    "comingSoon": "Próximamente",
+    "screenshotAlt": "Resultados de búsqueda en la app de ShortTerm: habitaciones en Sydney para tus fechas"
   },
   "howItWorks": {
     "title": "Cómo funciona",
@@ -87,7 +88,11 @@
   },
   "appPreview": {
     "title": "Mira ShortTerm en acción",
-    "subtitle": "Un vistazo rápido a cómo explorar habitaciones y chatear con tu futuro compañero de casa."
+    "subtitle": "Un vistazo rápido a cómo explorar habitaciones y chatear con tu futuro compañero de casa.",
+    "screenshotAlt": {
+      "listing": "Una habitación en la app de ShortTerm: fotos, precio por semana, bond y fechas",
+      "chat": "Chat con la anfitriona en la app de ShortTerm, coordinando una visita"
+    }
   },
   "whyShortTerm": {
     "title": "Por qué ShortTerm",
@@ -170,56 +175,216 @@
   "help": {
     "title": "Centro de ayuda",
     "intro": "Respuestas a las preguntas que más recibimos. ¿No encontraste la tuya? Escríbenos — mira el cuadro de contacto al final de esta página.",
+    "topicsLabel": "Temas",
     "stillNeedHelp": "¿Todavía necesitas ayuda? Escríbenos a",
     "contactEmail": "support@shortterm-app.com",
-    "sections": [
+    "topics": [
       {
-        "heading": "¿Cómo funciona ShortTerm?",
-        "body": [
-          "Los anfitriones publican su habitación con sus fechas, por unas semanas o long term, y quienes buscan habitación filtran por ciudad, barrio y fechas. Quien busca envía una solicitud desde la app y con ella se abre el chat con el anfitrión. Cuando ambas personas están de acuerdo, confirman el match dentro de la app — eso cierra la publicación y habilita las reviews mutuas entre ambos."
+        "id": "getting-started",
+        "title": "Primeros pasos",
+        "questions": [
+          {
+            "heading": "¿Cómo funciona ShortTerm?",
+            "body": [
+              "Los anfitriones publican su habitación con sus fechas: short term, con fecha de entrada y de salida, o long term, a partir de una fecha y sin fecha de salida. Quienes buscan habitación filtran por ciudad, barrio, fechas, precio y cómo es la casa, y envían una solicitud desde la app. Cada solicitud abre un chat con el anfitrión.",
+              "Cuando el anfitrión elige a un interesado y esa persona confirma, es un match: la publicación se cierra y, cuando termina la estadía, los dos pueden dejarse una review. En la app tienes este recorrido paso a paso en el menú ☰ → <b>Cómo funciona el match</b>."
+            ]
+          },
+          {
+            "heading": "¿ShortTerm cuesta algo? ¿Gestiona reservas o pagos?",
+            "body": [
+              "Hoy ShortTerm es gratis, tanto para buscar como para publicar. No hay reservas ni pagos dentro de la app: solo conectamos personas. El precio, el depósito, las normas de la casa y las fechas exactas los acuerdas directamente con la otra persona, y cualquier pago se hace fuera de la app.",
+              "Los precios de las publicaciones son semanales y en dólares australianos (AUD). Nunca pagues nada por adelantado: lee los <safety>consejos de seguridad</safety>."
+            ]
+          },
+          {
+            "heading": "¿Cómo cambio entre buscar habitación y ofrecer una?",
+            "body": [
+              "Toca la etiqueta que aparece debajo del título en cualquier pestaña principal: dice <b>Buscando habitación</b> u <b>Ofreciendo habitación</b>, junto al ícono ⇄. Cada toque cambia de modo. Es la misma cuenta para las dos cosas, sin tipos de cuenta separados.",
+              "Si la etiqueta muestra un punto, tienes notificaciones sin leer en el otro modo. Las pestañas Buscar y Alertas solo aparecen mientras buscas habitación; mientras ofreces una, tus alertas siguen en el menú ☰ → <b>Alertas de búsqueda</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "¿ShortTerm gestiona reservas o pagos?",
-        "body": [
-          "No. ShortTerm solo conecta personas — no hay flujo de reserva ni procesamiento de pagos dentro de la app. El precio, las normas de la casa y las fechas de entrada/salida se acuerdan directamente entre el anfitrión y el huésped, fuera de la app."
+        "id": "searching",
+        "title": "Buscar habitación",
+        "questions": [
+          {
+            "heading": "¿Cómo busco una habitación?",
+            "body": [
+              "En la pestaña <b>Buscar</b>, elige el tipo de estadía (short term o long term), las fechas y, si quieres, la ciudad y el barrio. Puedes sumar barrios cercanos, marcar <b>Búsqueda en pareja</b> o ver <b>Solo las que cubren todas mis fechas</b>.",
+              "En <b>Filtros</b> ajustas el precio semanal, los dormitorios, el parking y cómo es la casa: cuántas personas viven ahí y sus idiomas, nacionalidades y rango de edad. Si completas tu perfil, cada resultado te muestra cuántas cosas tienes en común con los compañeros de casa."
+            ]
+          },
+          {
+            "heading": "¿Qué son las alertas de búsqueda?",
+            "body": [
+              "Una alerta guarda los filtros de una búsqueda y te manda una notificación apenas se publica una habitación nueva que coincide. Créala con <b>Guardar como alerta</b> desde los resultados de búsqueda, o desde la pestaña <b>Alertas</b>.",
+              "Ahí mismo puedes ver las coincidencias de cada alerta y pausarla, editarla o eliminarla. Las alertas short term vencen cuando pasan sus fechas; las long term no vencen."
+            ]
+          },
+          {
+            "heading": "¿Cómo solicito una habitación?",
+            "body": [
+              "Abre la habitación que te interesa y toca <b>Solicitar habitación</b>. Al confirmar, tu solicitud le llega al anfitrión y se abre un chat con un primer mensaje sugerido, que puedes cambiar antes de enviarlo.",
+              "Si vas con tu pareja y la habitación acepta parejas, activa <b>Solicitud en pareja</b>: el anfitrión lo verá en tu solicitud, junto con el precio para parejas.",
+              "El anfitrión mira tu perfil para decidir, así que completarlo te ayuda a destacar."
+            ]
+          },
+          {
+            "heading": "¿Puedo cambiar o cancelar mi solicitud?",
+            "body": [
+              "Sí, desde el detalle de la solicitud, en la pestaña <b>Solicitudes</b>. Mientras el anfitrión no te haya elegido, puedes <b>Editar fechas</b> o <b>Cancelar solicitud</b>.",
+              "Si la cancelaste, puedes <b>Reactivar solicitud</b> mientras la habitación siga disponible. Y si sus fechas pasaron sin respuesta, puedes editarla con fechas nuevas para intentarlo otra vez. Si el anfitrión pausó la publicación, tendrás que esperar a que la reactive."
+            ]
+          }
         ]
       },
       {
-        "heading": "No puedo confirmar un match. ¿Qué está pasando?",
-        "body": [
-          "Un match necesita que ambas personas lo confirmen desde su lado — si ya confirmaste pero la publicación sigue apareciendo como abierta, es probable que la otra persona todavía no haya confirmado. Cuando ambos confirman, la publicación se cierra automáticamente y el match pasa a tus solicitudes confirmadas."
+        "id": "hosting",
+        "title": "Publicar una habitación",
+        "questions": [
+          {
+            "heading": "¿Cómo publico mi habitación?",
+            "body": [
+              "Cambia al modo <b>Ofreciendo habitación</b> y, en Inicio, toca <b>Publicar habitación</b>. El formulario te guía paso a paso por la habitación, la casa y quiénes viven en ella. Si sales a mitad de camino, guardamos un borrador en tu dispositivo para que sigas después (las fotos que elegiste tendrás que volver a agregarlas).",
+              "Cuando esté publicada, usa <b>Compartir</b> para mandarla a grupos de WhatsApp o Facebook, o a amigos, y que la vea más gente."
+            ]
+          },
+          {
+            "heading": "¿Puedo editar mi publicación?",
+            "body": [
+              "Sí: mientras la publicación esté activa o pausada, puedes cambiar el título, la descripción, las fotos, los idiomas y la información sobre los compañeros de casa.",
+              "Las fechas, el precio y otras condiciones (como el baño propio, los servicios incluidos o si en la casa se fuma o hay mascotas) quedan fijos, porque quienes buscan habitación se basan en esos datos. Si necesitas cambiarlos, usa <b>Clonar publicación</b>: abre una publicación nueva con los mismos datos para que los ajustes."
+            ]
+          },
+          {
+            "heading": "¿Qué diferencia hay entre pausar y eliminar una publicación?",
+            "body": [
+              "<b>Pausar publicación</b> la oculta de las búsquedas sin perder nada: las solicitudes pendientes siguen ahí y puedes volver a mostrarla cuando quieras con <b>Reactivar publicación</b>. Mientras está pausada no puedes elegir a nadie y nadie puede confirmar un match. Una publicación short term pausada vence igual cuando pasan sus fechas.",
+              "<b>Eliminar publicación</b> es permanente: deja de aparecer, avisamos a los interesados con una solicitud pendiente y esas solicitudes pasan a Sin match. Las conversaciones no se pierden. Para volver a publicarla, ábrela desde Inicio → <b>Historial de publicaciones</b> y toca <b>Clonar publicación</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "Mi publicación (o una solicitud) desapareció. ¿Qué pasó?",
-        "body": [
-          "Las publicaciones y solicitudes vencen automáticamente cuando su rango de fechas ya pasó, y la app también cierra las solicitudes ligadas a una publicación que fue pausada o eliminada. Revisa la sección de archivadas en tu lista de solicitudes — ahí quedan las publicaciones y solicitudes vencidas o eliminadas en lugar de borrarse directamente."
+        "id": "matching",
+        "title": "Solicitudes, match y estadía",
+        "questions": [
+          {
+            "heading": "¿Cómo funciona el match?",
+            "body": [
+              "El match tiene dos pasos. Primero, el anfitrión <b>elige</b> a uno de los interesados que le enviaron una solicitud. Después, esa persona <b>confirma</b> el match, o lo <b>rechaza</b> si cambió de opinión. Cuando confirma, es un match: la habitación es suya, la publicación se cierra y avisamos a los demás interesados.",
+              "El anfitrión elige a una sola persona a la vez. Mientras esa persona no confirme, puede elegir a otra o tocar <b>Deshacer elección</b>. También puede descartar a un interesado puntual con <b>No elegir</b> sin afectar al resto, y cambiar de idea con <b>Reconsiderar</b> mientras la publicación siga abierta.",
+              "Todo esto se hace desde el detalle de cada solicitud, en la pestaña <b>Solicitudes</b>. Antes de elegir, revisa los <safety>consejos de seguridad</safety>."
+            ]
+          },
+          {
+            "heading": "No puedo confirmar el match. ¿Qué pasa?",
+            "body": [
+              "Solo puedes confirmar después de que el anfitrión te elija. Si tu solicitud dice <b>Esperando que el anfitrión te elija</b>, la decisión todavía es suya: te avisaremos cuando decida.",
+              "Si ya te eligieron y aun así no puedes confirmar, revisa el estado de la solicitud: puede que el anfitrión haya pausado o eliminado la publicación, que hayan pasado las fechas o que haya elegido a otra persona.",
+              "Si eres el anfitrión y no puedes elegir a nadie, revisa que la publicación no esté pausada."
+            ]
+          },
+          {
+            "heading": "¿Dónde veo mis solicitudes y conversaciones?",
+            "body": [
+              "En la pestaña <b>Solicitudes</b>, separadas en tres listas: <b>Pendientes</b> (todavía sin resolver), <b>Confirmadas</b> (con match: próximas, en curso y finalizadas) y <b>Sin match</b> (canceladas, no elegidas, vencidas o de publicaciones eliminadas). Mientras buscas habitación ves las solicitudes que enviaste; mientras ofreces una, las que recibiste.",
+              "Tus conversaciones están en el ícono de mensajes, arriba de cada pestaña, y tus avisos en el ícono de notificaciones."
+            ]
+          },
+          {
+            "heading": "Mi publicación (o una solicitud) desapareció. ¿Qué pasó?",
+            "body": [
+              "Casi nunca se borra: pasa a otra lista. Las solicitudes que ya no están pendientes pasan a <b>Sin match</b>, en la pestaña Solicitudes: por ejemplo, si se canceló, si el anfitrión no la eligió o eliminó la publicación, si hubo match con otra persona o si sus fechas pasaron sin respuesta. Las publicaciones anteriores (con match, vencidas o eliminadas) están en Inicio → <b>Historial de publicaciones</b>, en el modo Ofreciendo habitación.",
+              "Las publicaciones y solicitudes short term vencen solas cuando pasan sus fechas; las long term no vencen. Una publicación pausada no desaparece: sigue en Inicio, oculta de las búsquedas y con sus solicitudes pendientes.",
+              "Para volver a publicarla, abre la publicación vencida o eliminada y toca <b>Clonar publicación</b>."
+            ]
+          },
+          {
+            "heading": "¿Cuándo puedo dejar una review?",
+            "body": [
+              "Cuando termina la estadía, o al mes de la mudanza si es long term. La opción aparece en el detalle de la solicitud, dentro de <b>Confirmadas</b>.",
+              "Las reviews se publican a la vez, cuando las dos personas enviaron la suya, así nadie escribe la suya después de leer la otra. Si solo una persona la envió, la otra tiene 14 días para dejar la suya; pasado ese plazo, la review enviada se publica igual y ya no se puede escribir la otra."
+            ]
+          }
         ]
       },
       {
-        "heading": "¿Cómo cambio entre buscar habitación y ofrecer una?",
-        "body": [
-          "Abre el menú (el ícono ☰ arriba de la app) y elige \"Cambiar a\" — cualquier cuenta puede pasar de buscar habitación a ofrecer una en cualquier momento, no hay un tipo de cuenta separado."
+        "id": "safety",
+        "title": "Seguridad",
+        "questions": [
+          {
+            "heading": "¿Cómo me protejo de fraudes?",
+            "body": [
+              "ShortTerm solo conecta personas: no gestionamos pagos ni verificamos identidades. Nunca pagues ni dejes una seña o un depósito por adelantado, antes de conocer a la otra persona en persona. No compartas datos bancarios, números de tarjeta ni contraseñas por chat. Visita la habitación antes de comprometerte, y desconfía de quien te apura o quiere sacar la conversación de la app.",
+              "Tienes estos consejos siempre a mano en cada chat, en <b>Consejos de seguridad</b>."
+            ]
+          },
+          {
+            "heading": "¿Cómo reporto a un usuario o una publicación?",
+            "body": [
+              "En un perfil o en una publicación, toca el ícono de bandera. En un chat o en el detalle de una solicitud, abre <b>Consejos de seguridad</b> y toca <b>Reportar</b>. Elige el motivo y, si quieres, agrega detalles.",
+              "Nuestro equipo revisa cada reporte, y la persona reportada no recibe ningún aviso. Cuando reportas a un usuario, también te ofrecemos bloquearlo."
+            ]
+          },
+          {
+            "heading": "¿Cómo bloqueo o desbloqueo a alguien?",
+            "body": [
+              "Abre el chat o la solicitud con esa persona, entra en <b>Consejos de seguridad</b> y toca <b>Bloquear</b>. No podrá escribirte ni ver tus publicaciones, y tú tampoco verás las suyas. No le avisamos.",
+              "Para desbloquear a alguien, ve a ☰ → <b>Configuración → Usuarios bloqueados</b>."
+            ]
+          }
         ]
       },
       {
-        "heading": "¿Cómo reporto a un usuario o una publicación?",
-        "body": [
-          "Usa el ícono de bandera para reportar en el perfil o la publicación, o el botón \"Reportar\" dentro de la información de seguridad de una conversación. Nuestro equipo revisa cada reporte que recibimos."
-        ]
-      },
-      {
-        "heading": "¿Cómo elimino mi cuenta?",
-        "body": [
-          "Ve a Configuración → Eliminar cuenta. Esto cierra tus publicaciones activas, retira tus solicitudes pendientes, y es permanente — no se puede deshacer desde la app.",
-          "Si no puedes abrir la app, consulta la página Eliminar cuenta de esta web."
-        ]
-      },
-      {
-        "heading": "¿Qué pasa con mis datos?",
-        "body": [
-          "Consulta nuestra Política de privacidad para el detalle completo de qué recopilamos y con quién lo compartimos."
+        "id": "account",
+        "title": "Tu cuenta y tu perfil",
+        "questions": [
+          {
+            "heading": "¿Para qué sirve completar mi perfil?",
+            "body": [
+              "Al registrarte solo te pedimos lo básico; el resto es opcional. Pero los anfitriones miran tu perfil para decidir, y con tus hábitos y gustos la app calcula cuántas <b>cosas en común</b> tienes con los compañeros de casa. Si ofreces habitación, un perfil completo genera más confianza en los interesados.",
+              "En la pestaña <b>Perfil</b> ves tu porcentaje y qué te falta. Al llegar al 100% ganas la insignia <b>Perfil completo</b>, que aparece junto a tu nombre."
+            ]
+          },
+          {
+            "heading": "No me llegan las notificaciones. ¿Qué hago?",
+            "body": [
+              "Primero revisa que las notificaciones de ShortTerm estén activadas en los ajustes de tu dispositivo. Después, en ☰ → <b>Configuración → Notificaciones</b>, elige qué avisos quieres recibir: mensajes, solicitudes, matches, reviews, alertas de búsqueda y consejos.",
+              "Esas opciones controlan las notificaciones que llegan a tu teléfono; dentro de la app, tus avisos siguen apareciendo en el ícono de notificaciones."
+            ]
+          },
+          {
+            "heading": "¿Cómo cambio o recupero mi contraseña?",
+            "body": [
+              "Si la olvidaste, toca <b>¿Olvidaste tu contraseña?</b> en la pantalla de inicio de sesión y te enviaremos por email un enlace para crear una nueva.",
+              "Con la sesión iniciada, puedes cambiarla en ☰ → <b>Configuración → Contraseña</b>. Si entras con Google, ahí mismo puedes crear una contraseña."
+            ]
+          },
+          {
+            "heading": "¿Cómo elimino mi cuenta?",
+            "body": [
+              "Ve a ☰ → <b>Configuración → Eliminar cuenta</b>. Si entras con email, te pediremos tu contraseña para confirmar. Tus publicaciones activas se cierran y tus solicitudes pendientes se retiran. Es permanente y no se puede deshacer.",
+              "Las conversaciones y reviews en las que participaste se conservan para la otra persona, como parte de su historial contigo, pero sin tu nombre ni tu foto.",
+              "Si no puedes abrir la app, sigue los pasos de la página <deleteAccount>Eliminar cuenta</deleteAccount>."
+            ]
+          },
+          {
+            "heading": "¿Qué pasa con mis datos?",
+            "body": [
+              "En la <privacy>Política de privacidad</privacy> te explicamos qué datos recopilamos, para qué los usamos y con quién los compartimos.",
+              "En ☰ → <b>Configuración → Privacidad</b> decides si tu edad se muestra en tu perfil y si compartes estadísticas de uso, que nunca incluyen tu email ni tus mensajes."
+            ]
+          },
+          {
+            "heading": "¿Cómo me comunico con el equipo de ShortTerm?",
+            "body": [
+              "Desde la app, en ☰ → <b>Configuración → Contáctanos</b>: cuéntanos qué pasa y te respondemos por email. También puedes escribirnos directamente a <email>support@shortterm-app.com</email>."
+            ]
+          }
         ]
       }
     ]
@@ -257,10 +422,10 @@
       "no": "Servicios no incluidos",
       "yes": "Servicios incluidos"
     },
-    "parkingLabel": "Estacionamiento",
+    "parkingLabel": "Parking",
     "parking": {
-      "no": "Sin estacionamiento",
-      "yes": "Con estacionamiento"
+      "no": "Sin parking",
+      "yes": "Con parking"
     },
     "genderPreferenceLabel": "Para quién es la habitación",
     "genderPreference": {

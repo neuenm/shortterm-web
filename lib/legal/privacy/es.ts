@@ -50,7 +50,7 @@ export const privacyEs = buildDocument({
         ],
         [
           p(
-            "**Tus publicaciones, si eres anfitrión.** El tipo de estadía, las fechas, la estadía mínima, el precio semanal y el precio para parejas, el bond, si los gastos están incluidos, si hay baño privado, si hay estacionamiento, los dormitorios y baños, los idiomas de la casa, para quién es la habitación, si se aceptan parejas, el barrio y, si quieres, la dirección exacta (que guardamos como texto y no geolocalizamos), la descripción (con las normas de la casa), las fotos y la información agregada sobre la casa que explica la sección §{housemates}.",
+            "**Tus publicaciones, si eres anfitrión.** El tipo de estadía, las fechas, la estadía mínima, el precio semanal y el precio para parejas, el bond, si los gastos están incluidos, si hay baño privado, si hay parking, los dormitorios y baños, los idiomas de la casa, para quién es la habitación, si se aceptan parejas, el barrio y, si quieres, la dirección exacta (que guardamos como texto y no geolocalizamos), la descripción (con las normas de la casa), las fotos y la información agregada sobre la casa que explica la sección §{housemates}.",
           ),
         ],
         [
@@ -82,12 +82,12 @@ export const privacyEs = buildDocument({
       clauses: [
         [
           p(
-            "Una publicación puede incluir información agregada sobre las personas que ya viven en la casa: cuántas son y cuántas fuman, tienen mascotas, trabajan en régimen FIFO, sus horarios, ocupación, limpieza, visitas, consumo de alcohol y energía social, un desglose por nacionalidad y por franja de edad, y sus gustos. Nos la facilita el anfitrión.",
+            "Una publicación puede incluir información agregada sobre las personas que ya viven en la casa: cuántas son y cuántas fuman, trabajan en régimen FIFO, sus horarios, ocupación y consumo de alcohol, un desglose por nacionalidad y por franja de edad, y sus gustos; además de cómo es la casa en general: lo ordenada que está, la frecuencia de las visitas, si hay mascotas y su ambiente. Nos la facilita el anfitrión.",
           ),
         ],
         [
           p(
-            "Son recuentos, nunca nombres ni fotos, y la mostramos para que quien busca habitación sepa con quién viviría. Los Términos obligan al anfitrión a informar a sus compañeros de casa y a no publicar nada que los identifique. En una casa muy pequeña, aun así, alguien podría deducir de quién se trata.",
+            "Lo que se refiere a las personas son recuentos, nunca nombres ni fotos, y lo mostramos para que quien busca habitación sepa con quién viviría. Los Términos obligan al anfitrión a informar a sus compañeros de casa y a no publicar nada que los identifique. En una casa muy pequeña, aun así, alguien podría deducir de quién se trata.",
           ),
         ],
         [
@@ -177,7 +177,7 @@ export const privacyEs = buildDocument({
         ],
         [
           p(
-            "**La web pública.** Una publicación se puede compartir con un enlace que abre una página de nuestra web, visible sin iniciar sesión. Esa página muestra solo: el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma principal, si se aceptan parejas, si hay baño privado, si hay estacionamiento, para quién es la habitación, cuántas personas viven en la casa (solo el número), la foto de portada, el número de fotos y si la publicación es reciente. **No muestra** la dirección exacta, la descripción, el bond, el resto de la información de la casa ni nada sobre el anfitrión.",
+            "**La web pública.** Una publicación se puede compartir con un enlace que abre una página de nuestra web, visible sin iniciar sesión. Esa página muestra solo: el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma principal, si se aceptan parejas, si hay baño privado, si hay parking, para quién es la habitación, cuántas personas viven en la casa (solo el número), la foto de portada, el número de fotos y si la publicación es reciente. **No muestra** la dirección exacta, la descripción, el bond, el resto de la información de la casa ni nada sobre el anfitrión.",
           ),
         ],
         [
@@ -409,7 +409,7 @@ export const privacyEs = buildDocument({
       clauses: [
         [
           p(
-            "**Estadísticas de uso (PostHog), solo con tu permiso.** La primera vez que uses la app te preguntamos si quieres compartirlas: la opción aparece desmarcada y rechazar es tan fácil como aceptar. Si aceptas, enviamos qué pantallas abres y qué acciones haces (por ejemplo, publicar, buscar o enviar una solicitud), junto con datos del dispositivo y tu identificador de cuenta, **nunca tu email, tu nombre ni el contenido de tus mensajes**. Si no aceptas, no se envía nada. Puedes cambiarlo cuando quieras en **Configuración → Privacidad → Estadísticas de uso**.",
+            "**Estadísticas de uso (PostHog), solo con tu permiso.** La primera vez que entras en la app en un dispositivo, ya con tu perfil creado, te preguntamos si quieres compartirlas: no se envía nada hasta que aceptas, y rechazar es tan fácil como aceptar. Si aceptas, enviamos qué pantallas abres y qué acciones haces (por ejemplo, publicar, buscar o enviar una solicitud), junto con datos del dispositivo y tu identificador de cuenta, **nunca tu email, tu nombre ni el contenido de tus mensajes**. Si no aceptas, no se envía nada. Puedes cambiarlo cuando quieras en **Configuración → Privacidad → Estadísticas de uso**.",
           ),
         ],
         [

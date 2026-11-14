@@ -82,12 +82,12 @@ export const privacyEn = buildDocument({
       clauses: [
         [
           p(
-            "A listing can include aggregate information about the people who already live in the house: how many there are and how many smoke, have pets, work FIFO, their sleep schedules, occupation, cleanliness, visitors, drinking and social energy, a breakdown by nationality and by age bracket, and their tastes. The host gives it to us.",
+            "A listing can include aggregate information about the people who already live in the house: how many there are and how many smoke, work FIFO, their sleep schedules, occupation and drinking, a breakdown by nationality and by age bracket, and their tastes; plus what the house is like as a whole: how tidy it is, how often there are visitors, whether there are pets and its vibe. The host gives it to us.",
           ),
         ],
         [
           p(
-            "These are counts, never names or photos, and we show them so someone looking for a room knows who they would be living with. The Terms require the host to tell their housemates and not to publish anything that identifies them. Even so, in a very small house someone might work out who is who.",
+            "What it says about the people is counts, never names or photos, and we show it so someone looking for a room knows who they would be living with. The Terms require the host to tell their housemates and not to publish anything that identifies them. Even so, in a very small house someone might work out who is who.",
           ),
         ],
         [
@@ -409,7 +409,7 @@ export const privacyEn = buildDocument({
       clauses: [
         [
           p(
-            "**Usage statistics (PostHog), only with your permission.** The first time you use the app we ask whether you want to share them: the option starts unticked and refusing is as easy as accepting. If you accept, we send which screens you open and what you do (for example, publishing, searching or sending a request), together with device details and your account id, **never your email, your name or the content of your messages**. If you don't accept, nothing is sent. You can change this at any time in **Settings → Privacy → Usage statistics**.",
+            "**Usage statistics (PostHog), only with your permission.** The first time you open the app on a device, once your profile is set up, we ask whether you want to share them: nothing is sent until you accept, and refusing is as easy as accepting. If you accept, we send which screens you open and what you do (for example, publishing, searching or sending a request), together with device details and your account id, **never your email, your name or the content of your messages**. If you don't accept, nothing is sent. You can change this at any time in **Settings → Privacy → Usage statistics**.",
           ),
         ],
         [
