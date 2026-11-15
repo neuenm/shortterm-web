@@ -30,7 +30,7 @@ export default function HeroSection() {
               alt=""
               width={96}
               height={96}
-              priority
+              loading="eager"
               className="h-24 w-24"
             />
           </div>

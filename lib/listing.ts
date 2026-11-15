@@ -59,3 +59,39 @@ export const getListingPreview = cache(
     return data as ListingPreview;
   },
 );
+
+// One room of get_nearby_listing_previews (the app's
+// supabase/migrations/20261115200000_nearby_listing_previews.sql): up to six active rooms of the
+// same area, shown under a listing or in its place once it's gone. A subset of what the preview
+// above already shows; Privacy 6.3 and Terms 5.5 (lib/legal/) list it too.
+export type NearbyListingPreview = {
+  id: string;
+  title: string;
+  suburb_name: string;
+  start_date: string;
+  end_date: string | null; // null for a long_term room
+  price_per_week: number | null;
+  cover_photo_url: string | null;
+  created_at: string;
+  // The city every room here is in; null when the origin is regional ("Regional QLD" is no place
+  // name), and the page says "nearby" instead.
+  area_name: string | null;
+  // The city's area page (/rooms/<area_slug>), null like area_name for a regional origin.
+  // Undefined until 20261115210000_area_pages.sql is applied.
+  area_slug?: string | null;
+  // Every active room of the area, of which at most six come back. Same value on every row.
+  total_count: number;
+};
+
+// Works from any listing id, closed or deleted ones included: that's when the page needs them most.
+// Empty on any error, including the RPC not existing yet, so the page renders exactly as before.
+export const getNearbyListingPreviews = cache(
+  async (id: string): Promise<NearbyListingPreview[]> => {
+    if (!LISTING_ID_PATTERN.test(id)) return [];
+    const { data, error } = await supabase.rpc("get_nearby_listing_previews", {
+      p_listing_id: id,
+    });
+    if (error || !Array.isArray(data)) return [];
+    return data as NearbyListingPreview[];
+  },
+);

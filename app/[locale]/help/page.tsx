@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getPathname, Link } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { pageAlternates } from "@/lib/site";
 
 /**
  * The help center the app's Settings → Help center opens. Every answer describes the app as it
@@ -19,12 +20,7 @@ export async function generateMetadata({
   return {
     title: `${t("title")} · ShortTerm`,
     description: t("intro"),
-    alternates: {
-      languages: {
-        es: await getPathname({ locale: "es", href: "/help" }),
-        en: await getPathname({ locale: "en", href: "/help" }),
-      },
-    },
+    alternates: await pageAlternates(locale, "/help"),
   };
 }
 

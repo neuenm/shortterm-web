@@ -46,6 +46,13 @@ Implementados en `short-term`. Si se toca alguno, hay que cambiar también el te
    - notificaciones y mensajes al soporte: 12 meses;
    - denuncias: 24 meses;
    - conversaciones en las que las dos cuentas están eliminadas: 30 días.
+6. **Toda publicación activa es pública en la web** (desde el 15 de noviembre de 2026).
+   - La página de una publicación muestra hasta seis habitaciones activas de la misma zona, también cuando la del enlace ya no está disponible (`get_nearby_listing_previews`).
+   - Cada ciudad y barrio con habitaciones tiene su página (`/rooms/brisbane`, `/rooms/brisbane/west-end`), con tarjetas de sus habitaciones activas (`get_area_listing_previews`).
+   - Por eso una publicación puede verse sin cuenta aunque su anfitrión nunca haya compartido el enlace.
+   - **Buscadores:** las páginas de las publicaciones llevan `noindex` (no salen en Google); las de ciudades y barrios sí se indexan, con sus tarjetas, a partir de 3 habitaciones (o con contenido propio de la ciudad). Todas las páginas con fotos llevan `noimageindex`, que Google respeta pero no todos los buscadores.
+   - Privacidad («La web pública» y «La web y las cookies») y Términos («Cuánto se publica de tu dirección») lo dicen, y enumeran lo que muestran la página y las tarjetas.
+7. **Guías** (`/guides`): información general sobre bond, estafas, impuestos y alquiler de habitaciones, con un aviso de que no es asesoramiento legal ni impositivo. Conviene que un abogado revise sobre todo `rental-bond-australia` y `rent-out-a-room`.
 
 ---
 

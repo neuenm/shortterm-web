@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import LegalDocumentView from "@/components/legal-document";
-import { getPathname, Link } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { pageAlternates } from "@/lib/site";
 import { getLegalDocument, toLegalLocale, type LegalDocumentKind } from "@/lib/legal";
 import { formatLegalDate, LEGAL, PUBLISHED } from "@/lib/legal/config";
 
@@ -23,12 +24,7 @@ export async function legalPageMetadata(
     description: title,
     // Keep the documents out of search results until they take effect.
     robots: PUBLISHED ? undefined : { index: false, follow: false },
-    alternates: {
-      languages: {
-        es: await getPathname({ locale: "es", href: PATHS[kind] }),
-        en: await getPathname({ locale: "en", href: PATHS[kind] }),
-      },
-    },
+    alternates: await pageAlternates(locale, PATHS[kind]),
   };
 }
 

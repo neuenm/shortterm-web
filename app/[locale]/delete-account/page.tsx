@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getPathname, Link } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { pageAlternates } from "@/lib/site";
 import { LEGAL } from "@/lib/legal/config";
 
 /**
@@ -18,12 +19,7 @@ export async function generateMetadata({
   return {
     title: `${t("title")} · ShortTerm`,
     description: t("intro", { developer: LEGAL.holder }),
-    alternates: {
-      languages: {
-        es: await getPathname({ locale: "es", href: "/delete-account" }),
-        en: await getPathname({ locale: "en", href: "/delete-account" }),
-      },
-    },
+    alternates: await pageAlternates(locale, "/delete-account"),
   };
 }
 

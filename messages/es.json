@@ -14,7 +14,11 @@
     "languageSwitcher": "Idioma",
     "download": "Descargar",
     "legalNotice": "Aviso legal",
-    "deleteAccount": "Eliminar cuenta"
+    "deleteAccount": "Eliminar cuenta",
+    "rooms": "Habitaciones",
+    "guides": "Guías",
+    "breadcrumbLabel": "Ruta de navegación",
+    "home": "Inicio"
   },
   "hero": {
     "eyebrow": "Una nueva forma de encontrar dónde quedarte",
@@ -398,6 +402,18 @@
       "title": "Esta habitación no está disponible por ahora",
       "description": "El anfitrión pausó la publicación y puede volver a activarla más adelante. Mientras tanto, busca otras habitaciones en la app."
     },
+    "nearby": {
+      "moreTitle": "Más habitaciones en {area}",
+      "moreTitleNoArea": "Más habitaciones cerca",
+      "insteadTitle": "Otras habitaciones en {area}",
+      "insteadTitleNoArea": "Otras habitaciones cerca",
+      "count": "{count, plural, one {# habitación disponible} other {# habitaciones disponibles}}",
+      "dates": "{startDate} – {endDate}",
+      "datesFrom": "Desde {date}",
+      "seeAllInApp": "Ver las {count} en la app",
+      "alertHint": "¿Ninguna te sirve? En la app puedes crear una alerta y te avisamos cuando aparezca una habitación parecida.",
+      "seeAllInArea": "Ver las {count} habitaciones de {area}"
+    },
     "stayType": {
       "long_term": "Long term"
     },
@@ -481,5 +497,72 @@
     "openInApp": "¿Ya tienes la app? Ábrela aquí",
     "metadataTitle": "{title} · ShortTerm",
     "metadataUnavailableTitle": "Habitación no disponible · ShortTerm"
+  },
+  "rooms": {
+    "hubMetadataTitle": "Habitaciones en alquiler por semanas en Australia | ShortTerm",
+    "hubMetadataDescription": "Habitaciones en casas compartidas de toda Australia, por unas semanas o por más tiempo: busca por ciudad y barrio, con fechas y precio por semana.",
+    "hubTitle": "Habitaciones en alquiler en toda Australia",
+    "hubIntro": "Habitaciones en casas compartidas, por unas semanas o por más tiempo. Elige una ciudad para ver sus barrios, las habitaciones disponibles ahora y cuánto cuestan por semana.",
+    "hubFeaturedTitle": "Ciudades más buscadas",
+    "hubMoreTitle": "Más ciudades con habitaciones",
+    "cityCount": "{count, plural, =0 {Sin habitaciones por ahora} one {# habitación disponible} other {# habitaciones disponibles}}",
+    "metadataTitle": "Habitaciones en alquiler por semanas en {area} | ShortTerm",
+    "metadataDescriptionCount": "{count, plural, one {# habitación disponible} other {# habitaciones disponibles}} en casas compartidas de {area}, por semanas{fromPrice}. Mira fechas y precios, y solicita una habitación en la app de ShortTerm.",
+    "metadataFromPrice": ", desde ${amount}",
+    "metadataDescriptionEmpty": "Encuentra una habitación en una casa compartida de {area}, por unas semanas o por más tiempo. Mira fechas y precios, y solicita una habitación en la app de ShortTerm.",
+    "title": "Habitaciones en alquiler en {area}",
+    "suburbArea": "{suburb}, {city}",
+    "statsCount": "{count, plural, one {# habitación disponible} other {# habitaciones disponibles}}",
+    "statsFrom": "desde ${amount} por semana",
+    "statsMedian": "mediana de ${amount} por semana",
+    "defaultIntro": "Habitaciones en casas compartidas de {area}, por unas semanas o por más tiempo. Cada habitación muestra sus fechas y su precio por semana, y la solicitas en la app de ShortTerm.",
+    "roomsTitle": "Habitaciones disponibles ahora",
+    "emptyTitle": "Ahora no hay habitaciones en {area}",
+    "emptyBody": "Aparecen habitaciones nuevas todas las semanas. Crea una alerta en la app y te avisamos cuando se publique una en {area}.",
+    "seeAllInApp": "Ver las {count} en la app",
+    "suburbsTitle": "Barrios con habitaciones en {city}",
+    "otherSuburbsTitle": "Otros barrios de {city}",
+    "allCityRooms": "Todas las habitaciones de {city}",
+    "suburbCount": "{count, plural, one {# habitación} other {# habitaciones}}",
+    "popularAreasTitle": "Barrios más buscados de {city}",
+    "gettingAroundTitle": "Cómo moverte en {city}",
+    "faqTitle": "Alquilar una habitación en {area}",
+    "faq": {
+      "priceQuestion": "¿Cuánto cuesta una habitación en {area}?",
+      "priceAnswerData": "Ahora mismo, las {count} habitaciones de {area} piden entre ${min} y ${max} por semana, y la mitad cuesta ${median} o menos. El precio depende del barrio, de si las cuentas están incluidas y de si el baño es privado.",
+      "priceAnswerGeneric": "Depende del barrio, de si las cuentas están incluidas y de si el baño es privado. Cada habitación de ShortTerm muestra su precio por semana, y algunas también uno para parejas.",
+      "shortQuestion": "¿Puedo alquilar una habitación por pocas semanas?",
+      "shortAnswer": "Sí. Las habitaciones Short term están disponibles entre dos fechas, y algunas piden una estadía mínima; las Long term no tienen fecha de fin. En la app puedes buscar por tus fechas.",
+      "bondQuestion": "¿Tengo que pagar bond?",
+      "bondAnswer": "La mayoría de los anfitriones lo pide. Cómo funciona, y dónde se deposita, depende del estado y del tipo de acuerdo: lee <guide>nuestra guía del bond</guide> antes de pagar nada.",
+      "requestQuestion": "¿Cómo consigo una habitación?",
+      "requestAnswer": "En la app de ShortTerm: solicitas la habitación para tus fechas y chateas ahí con el anfitrión. ShortTerm no cobra comisiones de reserva ni procesa pagos."
+    },
+    "guidesTitle": "Antes de mudarte",
+    "getAppTitle": "Encuentra tu habitación en la app",
+    "getAppBody": "Busca por tus fechas, mira quiénes viven en cada casa, solicita habitaciones y recibe alertas cuando aparezcan nuevas.",
+    "hostCta": "¿Tienes una habitación en {area}? <link>Cómo alquilarla</link>"
+  },
+  "guides": {
+    "indexMetadataTitle": "Guías para alquilar una habitación en Australia | ShortTerm",
+    "indexMetadataDescription": "Guías prácticas para encontrar habitación en una casa compartida en Australia, pagar el bond con seguridad, evitar estafas y alquilar tu propia habitación.",
+    "indexTitle": "Guías para alquilar una habitación en Australia",
+    "indexIntro": "Lo que conviene saber antes de buscar habitación en una casa compartida, o de alquilar la tuya: pensado para quienes llegan con una Working Holiday, estudiantes y anfitriones.",
+    "forGuests": "Si buscas habitación",
+    "forHosts": "Si alquilas una habitación",
+    "updated": "Actualizada el {date}",
+    "tableOfContents": "En esta guía",
+    "sources": "Fuentes",
+    "sourcesNote": "Información general, no asesoramiento legal ni impositivo. Las reglas cambian y varían entre estados: revisa las páginas oficiales para tu caso.",
+    "readGuide": "Leer la guía",
+    "moreGuides": "Más guías",
+    "citiesTitle": "Habitaciones por ciudad"
+  },
+  "explore": {
+    "title": "Habitaciones por ciudad",
+    "subtitle": "Mira las habitaciones disponibles ahora en las principales ciudades, barrio por barrio.",
+    "allCities": "Todas las ciudades",
+    "guidesTitle": "Guías para tu mudanza",
+    "allGuides": "Todas las guías"
   }
 }

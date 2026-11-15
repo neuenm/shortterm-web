@@ -15,7 +15,7 @@ export default async function Header() {
             alt="ShortTerm"
             width={273}
             height={100}
-            priority
+            loading="eager"
             className="h-11 w-auto sm:h-12"
           />
         </Link>

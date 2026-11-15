@@ -177,7 +177,7 @@ export const privacyEn = buildDocument({
         ],
         [
           p(
-            "**The public website.** A listing can be shared as a link that opens a page on our website, visible without signing in. That page shows only: the title, suburb, dates, room details, price, whether bills are included, main language, whether couples are accepted, whether there is a private bathroom, whether there is off-street parking, who the room is for, how many people live in the house (just the number), the cover photo, the number of photos and whether the listing is recent. **It doesn't show** the exact address, the description, the bond, any other house information or anything about the host.",
+            "**The public website.** Every active listing has a page on our website, visible to anyone without signing in: the one that opens when its link is shared. That page also shows, as cards, up to six active rooms in the same area, and shows them in its place once the listing is no longer available. On top of that, every city and suburb with rooms has its own page (“Rooms for rent in Brisbane”), which shows the active rooms of that area as cards. So a listing can be seen on the website even if its host never shared its link. Listing pages ask search engines (such as Google) not to show them in their results; the city and suburb pages can appear in them, with their cards. On both, we ask search engines not to show the photos in their image results. A listing's page shows only: the title, suburb, dates, room details, price, whether bills are included, main language, whether couples are accepted, whether there is a private bathroom, whether there is off-street parking, who the room is for, how many people live in the house (just the number), the cover photo, the number of photos and whether the listing is recent. Each card shows only the cover photo, title, suburb, dates, price and whether the listing is recent. **Neither the page nor the cards show** the exact address, the description, the bond, any other house information or anything about the host.",
           ),
         ],
         [
@@ -387,7 +387,7 @@ export const privacyEn = buildDocument({
       clauses: [
         [
           p(
-            "The website exists to describe the app, answer common questions and open shared listing links. It needs no account, carries no advertising or third-party tracking, and has no forms: if you write to us from it, you do so by email.",
+            "The website exists to describe the app, answer common questions and show the public pages of active listings and of the cities and suburbs they're in, and publish guides about renting a room. It needs no account, carries no advertising or third-party tracking, and has no forms: if you write to us from it, you do so by email.",
           ),
         ],
         [

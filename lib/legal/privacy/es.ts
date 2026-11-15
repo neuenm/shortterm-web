@@ -177,7 +177,7 @@ export const privacyEs = buildDocument({
         ],
         [
           p(
-            "**La web pública.** Una publicación se puede compartir con un enlace que abre una página de nuestra web, visible sin iniciar sesión. Esa página muestra solo: el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma principal, si se aceptan parejas, si hay baño privado, si hay parking, para quién es la habitación, cuántas personas viven en la casa (solo el número), la foto de portada, el número de fotos y si la publicación es reciente. **No muestra** la dirección exacta, la descripción, el bond, el resto de la información de la casa ni nada sobre el anfitrión.",
+            "**La web pública.** Cada publicación activa tiene una página en nuestra web, visible para cualquiera sin iniciar sesión: la que se abre al compartir su enlace. Esa página también muestra, en forma de tarjeta, hasta seis habitaciones activas de la misma zona, y las muestra en su lugar cuando la publicación ya no está disponible. Además, cada ciudad y cada barrio con habitaciones tiene su propia página («Habitaciones en Brisbane»), que muestra en forma de tarjeta las habitaciones activas de esa zona. Así, una publicación puede verse en la web aunque su anfitrión nunca haya compartido su enlace. Las páginas de las publicaciones les piden a los buscadores (como Google) que no las muestren en sus resultados; las páginas de las ciudades y los barrios sí pueden aparecer en ellos, con sus tarjetas. En las dos, les pedimos a los buscadores que no muestren las fotos en sus resultados de imágenes. La página de una publicación muestra solo: el título, el barrio, las fechas, los datos de la habitación, el precio, si los gastos están incluidos, el idioma principal, si se aceptan parejas, si hay baño privado, si hay parking, para quién es la habitación, cuántas personas viven en la casa (solo el número), la foto de portada, el número de fotos y si la publicación es reciente. Cada tarjeta muestra solo la foto de portada, el título, el barrio, las fechas, el precio y si la publicación es reciente. **Ni la página ni las tarjetas muestran** la dirección exacta, la descripción, el bond, el resto de la información de la casa ni nada sobre el anfitrión.",
           ),
         ],
         [
@@ -387,7 +387,7 @@ export const privacyEs = buildDocument({
       clauses: [
         [
           p(
-            "La web sirve para explicar la app, responder preguntas frecuentes y abrir los enlaces de las publicaciones compartidas. No necesita cuenta, no tiene publicidad ni seguimiento de terceros y no tiene formularios: si nos escribes desde ella, lo haces por email.",
+            "La web sirve para explicar la app, responder preguntas frecuentes y mostrar las páginas públicas de las publicaciones activas y de las ciudades y barrios donde están, y publicar guías sobre alquilar una habitación. No necesita cuenta, no tiene publicidad ni seguimiento de terceros y no tiene formularios: si nos escribes desde ella, lo haces por email.",
           ),
         ],
         [

@@ -25,6 +25,12 @@ export default async function Footer() {
 
         <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 sm:justify-end">
+            <Link href="/rooms" className="text-ink hover:text-primary">
+              {t("nav.rooms")}
+            </Link>
+            <Link href="/guides" className="text-ink hover:text-primary">
+              {t("nav.guides")}
+            </Link>
             <Link href="/help" className="text-ink hover:text-primary">
               {t("nav.help")}
             </Link>

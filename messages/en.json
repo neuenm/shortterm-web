@@ -14,7 +14,11 @@
     "languageSwitcher": "Language",
     "download": "Download",
     "legalNotice": "Legal notice",
-    "deleteAccount": "Delete account"
+    "deleteAccount": "Delete account",
+    "rooms": "Rooms",
+    "guides": "Guides",
+    "breadcrumbLabel": "Breadcrumb",
+    "home": "Home"
   },
   "hero": {
     "eyebrow": "A new way to find where to stay",
@@ -398,6 +402,18 @@
       "title": "This room isn't available right now",
       "description": "The host paused the listing and may turn it back on later. In the meantime, find other rooms in the app."
     },
+    "nearby": {
+      "moreTitle": "More rooms in {area}",
+      "moreTitleNoArea": "More rooms nearby",
+      "insteadTitle": "Other rooms in {area}",
+      "insteadTitleNoArea": "Other rooms nearby",
+      "count": "{count, plural, one {# room available} other {# rooms available}}",
+      "dates": "{startDate} – {endDate}",
+      "datesFrom": "From {date}",
+      "seeAllInApp": "See all {count} in the app",
+      "alertHint": "None of these right for you? Create an alert in the app and we'll let you know when a similar room comes up.",
+      "seeAllInArea": "See all {count} rooms in {area}"
+    },
     "stayType": {
       "long_term": "Long term"
     },
@@ -481,5 +497,72 @@
     "openInApp": "Already have the app? Open it here",
     "metadataTitle": "{title} · ShortTerm",
     "metadataUnavailableTitle": "Room unavailable · ShortTerm"
+  },
+  "rooms": {
+    "hubMetadataTitle": "Short-term rooms for rent in Australia | ShortTerm",
+    "hubMetadataDescription": "Rooms in share houses across Australia, for a few weeks or for longer: browse by city and suburb, with dates and weekly prices.",
+    "hubTitle": "Rooms for rent across Australia",
+    "hubIntro": "Rooms in share houses, for a few weeks or for longer. Pick a city to see its suburbs, the rooms available now and what they cost each week.",
+    "hubFeaturedTitle": "Popular cities",
+    "hubMoreTitle": "More cities with rooms",
+    "cityCount": "{count, plural, =0 {No rooms right now} one {# room available} other {# rooms available}}",
+    "metadataTitle": "Short-term rooms for rent in {area} | ShortTerm",
+    "metadataDescriptionCount": "{count, plural, one {# room} other {# rooms}} available in {area} share houses, by the week{fromPrice}. See dates and weekly prices, and request a room in the ShortTerm app.",
+    "metadataFromPrice": ", from ${amount}",
+    "metadataDescriptionEmpty": "Find a room in a {area} share house, for a few weeks or for longer. See dates and weekly prices, and request a room in the ShortTerm app.",
+    "title": "Rooms for rent in {area}",
+    "suburbArea": "{suburb}, {city}",
+    "statsCount": "{count, plural, one {# room available} other {# rooms available}}",
+    "statsFrom": "from ${amount} a week",
+    "statsMedian": "median ${amount} a week",
+    "defaultIntro": "Rooms in share houses in {area}, for a few weeks or for longer. Each room shows its dates and weekly price, and you request it in the ShortTerm app.",
+    "roomsTitle": "Rooms available now",
+    "emptyTitle": "No rooms in {area} right now",
+    "emptyBody": "New rooms come up every week. Create an alert in the app and we'll let you know when one is published in {area}.",
+    "seeAllInApp": "See all {count} in the app",
+    "suburbsTitle": "Suburbs with rooms in {city}",
+    "otherSuburbsTitle": "Other suburbs in {city}",
+    "allCityRooms": "All rooms in {city}",
+    "suburbCount": "{count, plural, one {# room} other {# rooms}}",
+    "popularAreasTitle": "Popular suburbs in {city}",
+    "gettingAroundTitle": "Getting around {city}",
+    "faqTitle": "Renting a room in {area}",
+    "faq": {
+      "priceQuestion": "How much does a room cost in {area}?",
+      "priceAnswerData": "Right now the {count} rooms in {area} ask between ${min} and ${max} a week, and half of them cost ${median} or less. The price depends on the suburb, whether bills are included and whether the bathroom is private.",
+      "priceAnswerGeneric": "It depends on the suburb, whether bills are included and whether the bathroom is private. Every room on ShortTerm shows its weekly price, and some also show a price for couples.",
+      "shortQuestion": "Can I rent a room for just a few weeks?",
+      "shortAnswer": "Yes. Short term rooms are available between two dates, and some ask for a minimum stay; Long term rooms have no end date. In the app you can search by your own dates.",
+      "bondQuestion": "Do I have to pay a bond?",
+      "bondAnswer": "Most hosts ask for one. How it works, and where it's lodged, depends on the state and on the kind of arrangement: read <guide>our guide to the bond</guide> before you pay anything.",
+      "requestQuestion": "How do I get a room?",
+      "requestAnswer": "In the ShortTerm app: you request the room for your dates, and you chat with the host there. ShortTerm doesn't charge booking fees or process payments."
+    },
+    "guidesTitle": "Before you move in",
+    "getAppTitle": "Find your room in the app",
+    "getAppBody": "Search by your dates, see who lives in each house, request rooms and get alerts when new ones come up.",
+    "hostCta": "Have a room in {area}? <link>How to rent it out</link>"
+  },
+  "guides": {
+    "indexMetadataTitle": "Guides to renting a room in Australia | ShortTerm",
+    "indexMetadataDescription": "Practical guides for finding a room in an Australian share house, paying a bond safely, avoiding scams and renting out your own room.",
+    "indexTitle": "Guides to renting a room in Australia",
+    "indexIntro": "What's worth knowing before you look for a room in a share house, or rent out your own: written for people arriving on a working holiday, students and hosts.",
+    "forGuests": "Looking for a room",
+    "forHosts": "Renting out a room",
+    "updated": "Updated {date}",
+    "tableOfContents": "In this guide",
+    "sources": "Sources",
+    "sourcesNote": "General information, not legal or tax advice. Rules change and differ between states: check the official pages for your case.",
+    "readGuide": "Read the guide",
+    "moreGuides": "More guides",
+    "citiesTitle": "Rooms by city"
+  },
+  "explore": {
+    "title": "Rooms by city",
+    "subtitle": "See the rooms available now in the main cities, suburb by suburb.",
+    "allCities": "All cities",
+    "guidesTitle": "Guides for your move",
+    "allGuides": "All guides"
   }
 }

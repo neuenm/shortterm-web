@@ -2,15 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { getListingPreview, isNewListing, type ListingPreview } from "@/lib/listing";
+import {
+  getListingPreview,
+  getNearbyListingPreviews,
+  isNewListing,
+  type ListingPreview,
+  type NearbyListingPreview,
+} from "@/lib/listing";
 import { formatDate, FULL_DATE_FORMAT, START_DATE_FORMAT } from "@/lib/format";
 import { getPlatform, type Platform } from "@/lib/platform";
 import { APP_STORE_ID, storeUrlFor } from "@/lib/store-urls";
-import { getPathname } from "@/i18n/navigation";
+import { absoluteUrl, NO_IMAGE_INDEX, pageAlternates } from "@/lib/site";
 import StoreBadges from "@/components/store-badges";
 import AppCtaBar from "@/components/app-cta-bar";
 import Icon from "@/components/listing-icons";
 import LockedSection, { HostSilhouette, HouseholdSilhouette } from "@/components/locked-section";
+import NearbyListings from "@/components/nearby-listings";
 import {
   FactCell,
   FactGrid,
@@ -19,9 +26,6 @@ import {
   TagChip,
 } from "@/components/listing-ui";
 
-// Same host the app shares links on (its src/constants/links.ts WEB_BASE_URL) — the apex
-// domain 308-redirects here, so og:url must not point at it.
-const WEB_BASE_URL = "https://www.shortterm-app.com";
 const GET_APP_ID = "get-app";
 
 type Translate = (key: string, values?: Record<string, string | number>) => string;
@@ -47,18 +51,18 @@ export async function generateMetadata({
   const listing = await getListingPreview(id);
   const t = await getTranslations({ locale, namespace: "listing" });
 
-  const alternates = {
-    languages: {
-      es: await getPathname({ locale: "es", href: `/listing/${id}` }),
-      en: await getPathname({ locale: "en", href: `/listing/${id}` }),
-    },
-  };
+  const alternates = await pageAlternates(locale, `/listing/${id}`);
+  // A listing lives for weeks and is someone's home, so its page stays out of search results
+  // (and its photos out of image search), in every state. Crawlers still follow its links to
+  // the area pages, which carry the search traffic instead (SEO.md). The link previews of
+  // WhatsApp and Facebook ignore robots, so sharing works as before.
+  const robots = { index: false, follow: true, ...NO_IMAGE_INDEX };
 
   if (!listing) {
-    return { title: t("metadataUnavailableTitle"), alternates };
+    return { title: t("metadataUnavailableTitle"), alternates, robots };
   }
 
-  const url = `${WEB_BASE_URL}${await getPathname({ locale, href: `/listing/${id}` })}`;
+  const url = await absoluteUrl(locale, `/listing/${id}`);
   const title = t("metadataTitle", { title: listing.title });
   // What a WhatsApp/Facebook link preview shows under the title: price first, it's what
   // makes someone tap.
@@ -77,6 +81,7 @@ export async function generateMetadata({
     title,
     description,
     alternates,
+    robots,
     openGraph: {
       title,
       description,
@@ -93,21 +98,43 @@ export async function generateMetadata({
   };
 }
 
+// A room that's gone (matched, expired, deleted) or paused. Its link keeps circulating in the
+// groups for weeks, so the page offers the active rooms of the same area instead of a dead end.
 function UnavailableState({
   title,
   description,
   platform,
+  locale,
+  nearby,
+  nearbyFooter,
 }: {
   title: string;
   description: string;
   platform: Platform;
+  locale: string;
+  nearby: NearbyListingPreview[];
+  nearbyFooter: string;
 }) {
+  const hasNearby = nearby.length > 0;
   return (
-    <div className="mx-auto flex max-w-lg flex-col items-center gap-6 px-6 py-24 text-center">
+    <div
+      className={`mx-auto flex flex-col items-center gap-6 px-6 text-center ${
+        hasNearby ? "max-w-2xl py-16" : "max-w-lg py-24"
+      }`}
+    >
       <Image src="/isotipo.png" alt="" width={64} height={64} className="h-16 w-16" />
       <h1 className="text-2xl font-extrabold text-ink">{title}</h1>
       <p className="text-muted">{description}</p>
-      <StoreBadges platform={platform} className="justify-center" />
+      <NearbyListings
+        listings={nearby}
+        locale={locale}
+        variant="instead"
+        appHref={storeUrlFor(platform) ?? "#store-badges"}
+      />
+      {hasNearby ? <p className="text-muted">{nearbyFooter}</p> : null}
+      <div id="store-badges">
+        <StoreBadges platform={platform} className="justify-center" />
+      </div>
     </div>
   );
 }
@@ -119,7 +146,11 @@ export default async function ListingPreviewPage({
   setRequestLocale(locale);
 
   const t = await getTranslations("listing");
-  const [listing, platform] = await Promise.all([getListingPreview(id), getPlatform()]);
+  const [listing, platform, nearby] = await Promise.all([
+    getListingPreview(id),
+    getPlatform(),
+    getNearbyListingPreviews(id),
+  ]);
 
   if (!listing) {
     return (
@@ -127,6 +158,9 @@ export default async function ListingPreviewPage({
         title={t("unavailable.title")}
         description={t("unavailable.description")}
         platform={platform}
+        locale={locale}
+        nearby={nearby}
+        nearbyFooter={t("nearby.alertHint")}
       />
     );
   }
@@ -137,13 +171,17 @@ export default async function ListingPreviewPage({
         title={t("unavailablePaused.title")}
         description={t("unavailablePaused.description")}
         platform={platform}
+        locale={locale}
+        nearby={nearby}
+        nearbyFooter={t("nearby.alertHint")}
       />
     );
   }
 
   // Every "see more" on the page leads to the same place: straight to this phone's store when
-  // there is one, otherwise down to the download band.
-  const appHref = storeUrlFor(platform) ?? `#${GET_APP_ID}`;
+  // there is one, otherwise down to the download band. The listing rides along to the Play Store
+  // (see androidStoreUrl), so the app can open it after the install.
+  const appHref = storeUrlFor(platform, listing.id) ?? `#${GET_APP_ID}`;
   const primaryLanguage = listing.primary_language;
 
   const heroBand: ReactNode = (
@@ -269,9 +307,16 @@ export default async function ListingPreviewPage({
     </>
   );
 
+  // Last, before the download band: someone for whom this room doesn't fit sees what else is
+  // around before being asked to install anything.
+  const nearbyBand: ReactNode =
+    nearby.length > 0 ? (
+      <NearbyListings listings={nearby} locale={locale} variant="more" appHref={appHref} />
+    ) : null;
+
   // Same order as a guest reads the listing in the app; what the preview can't show is
   // blurred in place rather than left out, so the visitor sees there's more.
-  const bands = [heroBand, detailsBand, languagesBand, hostBand, householdBand].filter(
+  const bands = [heroBand, detailsBand, languagesBand, hostBand, householdBand, nearbyBand].filter(
     (band) => band !== null,
   );
   const perks = t.raw("gate.perks") as string[];
@@ -286,7 +331,8 @@ export default async function ListingPreviewPage({
                 src={listing.cover_photo_url}
                 alt={listing.title}
                 fill
-                priority
+                loading="eager"
+                fetchPriority="high"
                 className="object-cover"
                 sizes="(min-width: 672px) 672px, 100vw"
               />
@@ -350,7 +396,7 @@ export default async function ListingPreviewPage({
                 </li>
               ))}
             </ul>
-            <StoreBadges platform={platform} className="justify-center" />
+            <StoreBadges platform={platform} listingId={listing.id} className="justify-center" />
             {/* A custom-scheme link does nothing on desktop, so only phones get it. */}
             {platform !== "other" ? (
               <a

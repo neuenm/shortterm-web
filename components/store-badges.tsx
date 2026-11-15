@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { Platform } from "@/lib/platform";
-import { STORE_URLS } from "@/lib/store-urls";
+import { androidStoreUrl, STORE_URLS, type StoreLinkMedium } from "@/lib/store-urls";
 
 function BadgeContent({
   icon,
@@ -51,14 +51,20 @@ function PlayIcon() {
 export default function StoreBadges({
   className = "",
   platform = "other",
+  listingId,
+  medium,
 }: {
   className?: string;
   // On a phone only that phone's store is relevant; anywhere else both badges show.
   platform?: Platform;
+  // On a listing's page: the Play Store link carries it, so the app opens it after the install.
+  listingId?: string;
+  // Which kind of page the Play link was tapped on (an area page, a guide), for the Play Console.
+  medium?: StoreLinkMedium;
 }) {
   const t = useTranslations();
   const iosHref = STORE_URLS.ios;
-  const androidHref = STORE_URLS.android;
+  const androidHref = androidStoreUrl(listingId, medium);
   const showIos = platform !== "android";
   const showAndroid = platform !== "ios";
 

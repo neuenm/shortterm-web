@@ -7,7 +7,6 @@ import { Nunito } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { routing } from "@/i18n/routing";
-import { getPathname } from "@/i18n/navigation";
 import "../globals.css";
 
 const nunito = Nunito({
@@ -36,11 +35,15 @@ export async function generateMetadata({
       template: "%s",
     },
     description: t("description"),
-    alternates: {
-      languages: {
-        es: await getPathname({ locale: "es", href: "/" }),
-        en: await getPathname({ locale: "en", href: "/" }),
-      },
+    // No `alternates` here: a page that didn't set its own would inherit the home page's canonical
+    // and hreflang. Every page sets them (pageAlternates in lib/site.ts).
+    // Search Console and Bing Webmaster Tools ownership, when verified with a meta tag rather than
+    // DNS (SEO.md). Set in the hosting environment; nothing renders while unset.
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+      other: process.env.BING_SITE_VERIFICATION
+        ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+        : undefined,
     },
     openGraph: {
       siteName: "ShortTerm",
