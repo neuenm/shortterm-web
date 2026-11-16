@@ -73,7 +73,7 @@
         },
         {
           "title": "You choose a guest",
-          "description": "You can choose any guest who sent you a request, any time, while the listing is still open. You can also reject a specific guest without affecting the rest. Once the person you chose confirms the match, we let the other interested guests know they weren't chosen."
+          "description": "You can choose any interested guest while the listing is open, or reject one without affecting the rest. Once the person you chose confirms the match, we let the others know."
         },
         {
           "title": "The guest responds",

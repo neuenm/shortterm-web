@@ -73,7 +73,7 @@
         },
         {
           "title": "Eliges a un interesado",
-          "description": "Puedes elegir a cualquier interesado que te haya enviado una solicitud, cuando quieras, mientras la publicación siga abierta. También puedes rechazar a un interesado puntual sin afectar al resto. Cuando la persona que elegiste confirme el match, les avisamos a los demás interesados que no fueron elegidos."
+          "description": "Puedes elegir a cualquier interesado mientras la publicación siga abierta, o rechazar a uno sin afectar al resto. Cuando la persona elegida confirme el match, avisamos a los demás."
         },
         {
           "title": "El interesado responde",
