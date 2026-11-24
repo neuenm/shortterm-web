@@ -44,6 +44,22 @@ export function isNewListing(createdAt: string): boolean {
   return Date.now() - new Date(createdAt).getTime() < NEW_LISTING_WINDOW_DAYS * 24 * 60 * 60 * 1000;
 }
 
+// Link previews (Open Graph, summary_large_image) at the size of the site's own banner
+// (app/[locale]/layout.tsx).
+export const SHARE_IMAGE_SIZE = { width: 1200, height: 630 } as const;
+
+// The room's cover as a link-preview image: a 1200×630 JPEG made by app/og/listing/[file]/route.ts.
+// The stored photo can't go out as it is. Phones upload WebP (the app's src/lib/image.ts), and a room
+// with a WebP cover got no WhatsApp preview at all on Android, while the PNG banner did. Most covers
+// are also portrait, which link cards crop or shrink to a thumbnail. The URL carries the cover's
+// file name, which is unique per upload, so a new cover gets a new URL rather than the copy WhatsApp
+// and the CDN cached of the old one.
+export function listingShareImagePath(id: string, coverPhotoUrl: string): string {
+  const fileName = coverPhotoUrl.split(/[?#]/)[0].split("/").pop() ?? "";
+  const version = fileName.replace(/\.[^.]*$/, "");
+  return `/og/listing/${id}.jpg?v=${encodeURIComponent(version)}`;
+}
+
 // Listing ids are UUIDs. Anything else (a bot walking random URLs, a mangled shared link) can't
 // match a listing, so it gets the not-found page without spending a Supabase call.
 const LISTING_ID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;

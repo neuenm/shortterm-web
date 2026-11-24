@@ -6,6 +6,8 @@ import {
   getListingPreview,
   getNearbyListingPreviews,
   isNewListing,
+  listingShareImagePath,
+  SHARE_IMAGE_SIZE,
   type ListingPreview,
   type NearbyListingPreview,
 } from "@/lib/listing";
@@ -65,17 +67,27 @@ export async function generateMetadata({
   const url = await absoluteUrl(locale, `/listing/${id}`);
   const title = t("metadataTitle", { title: listing.title });
   // What a WhatsApp/Facebook link preview shows under the title: price first, it's what
-  // makes someone tap.
+  // makes someone tap. An open-ended room says "Long term", as the page's chip does: a share
+  // from iOS is only this card, and "Available from" alone doesn't say there's no end date.
   const description = [
     listing.price_per_week ? t("priceWeekly", { amount: listing.price_per_week }) : null,
+    listing.end_date === null ? t("stayType.long_term") : null,
     listing.location_text,
     formatAvailability(listing, t, locale),
   ]
     .filter(Boolean)
     .join(" · ");
+  // The cover goes out as a 1200×630 JPEG (listingShareImagePath), never as the stored photo.
   // No photo: the site's own link-preview banner rather than the square logo, which
   // summary_large_image crops badly.
-  const image = listing.cover_photo_url ?? `/og-${locale}.png`;
+  const image = listing.cover_photo_url
+    ? {
+        url: listingShareImagePath(listing.id, listing.cover_photo_url),
+        ...SHARE_IMAGE_SIZE,
+        type: "image/jpeg",
+        alt: listing.title,
+      }
+    : { url: `/og-${locale}.png`, ...SHARE_IMAGE_SIZE };
 
   return {
     title,

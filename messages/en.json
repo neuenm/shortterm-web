@@ -421,7 +421,7 @@
     "priceWeekly": "${amount} AUD / week",
     "priceWeeklyCouples": "${amount} AUD / week for couples",
     "availableFrom": "Available from {date}",
-    "availableRange": "Room available {startDate} – {endDate}",
+    "availableRange": "Room available from {startDate} to {endDate}",
     "mapLocked": "See the location on the map in the app",
     "morePhotos": "More photos in the app",
     "allPhotos": "See all {count} photos in the app",
